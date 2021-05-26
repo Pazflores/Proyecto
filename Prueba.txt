@@ -1,0 +1,4 @@
+Ver si los cambios se realizan
+-Clases
+-Logica de programación
+-Vistas
