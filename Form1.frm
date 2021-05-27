@@ -1,13 +1,13 @@
 VERSION 5.00
 Begin VB.Form Form1 
    Caption         =   "Form1"
-   ClientHeight    =   6825
+   ClientHeight    =   6345
    ClientLeft      =   120
    ClientTop       =   465
-   ClientWidth     =   11805
+   ClientWidth     =   11655
    LinkTopic       =   "Form1"
-   ScaleHeight     =   6825
-   ScaleWidth      =   11805
+   ScaleHeight     =   6345
+   ScaleWidth      =   11655
    StartUpPosition =   3  'Windows Default
    Begin VB.CommandButton cmdingresar 
       Caption         =   "INGRESAR"
