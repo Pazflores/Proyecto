@@ -29,7 +29,6 @@ Begin VB.Form Form1
       Height          =   405
       IMEMode         =   3  'DISABLE
       Left            =   3480
-      PasswordChar    =   "*"
       TabIndex        =   4
       Top             =   2040
       Width           =   4455

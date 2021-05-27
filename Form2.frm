@@ -1,7 +1,7 @@
 VERSION 5.00
 Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Begin VB.Form Form2 
-   Caption         =   "Form2"
+   Caption         =   "ri"
    ClientHeight    =   8025
    ClientLeft      =   120
    ClientTop       =   465
@@ -21,8 +21,8 @@ Begin VB.Form Form2
    End
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   495
-      Left            =   9240
-      Top             =   4320
+      Left            =   8520
+      Top             =   4200
       Width           =   1815
       _ExtentX        =   3201
       _ExtentY        =   873
@@ -113,17 +113,17 @@ Begin VB.Form Form2
    Begin VB.CommandButton cmdanterior 
       Caption         =   "Anterior"
       Height          =   495
-      Left            =   9600
+      Left            =   7320
       TabIndex        =   5
-      Top             =   3240
+      Top             =   3360
       Width           =   1815
    End
    Begin VB.CommandButton cmdsiguiente 
       Caption         =   "Siguiente"
       Height          =   495
-      Left            =   7440
+      Left            =   9720
       TabIndex        =   4
-      Top             =   3240
+      Top             =   3360
       Width           =   1815
    End
    Begin VB.CommandButton cmdeliminar 
