@@ -1,6 +1,7 @@
 VERSION 5.00
 Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Begin VB.Form Form2 
+   BackColor       =   &H00FFFFFF&
    Caption         =   "ri"
    ClientHeight    =   8025
    ClientLeft      =   120
@@ -9,20 +10,30 @@ Begin VB.Form Form2
    LinkTopic       =   "Form2"
    ScaleHeight     =   8025
    ScaleWidth      =   14310
-   StartUpPosition =   3  'Windows Default
+   StartUpPosition =   1  'CenterOwner
    Begin VB.TextBox txtapellido 
       DataField       =   "Apellido"
       DataSource      =   "Adodc1"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   495
-      Left            =   3120
+      Left            =   8640
       TabIndex        =   16
-      Top             =   3360
-      Width           =   2535
+      Top             =   2640
+      Width           =   2895
    End
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   495
-      Left            =   8520
-      Top             =   4200
+      Left            =   11040
+      Top             =   480
+      Visible         =   0   'False
       Width           =   1815
       _ExtentX        =   3201
       _ExtentY        =   873
@@ -68,140 +79,315 @@ Begin VB.Form Form2
    Begin VB.TextBox txttelefono 
       DataField       =   "Teléfono"
       DataSource      =   "Adodc1"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   495
-      Left            =   3120
+      Left            =   8640
       TabIndex        =   14
-      Top             =   5880
-      Width           =   2535
+      Top             =   3600
+      Width           =   2895
    End
    Begin VB.TextBox txtdireccion 
       DataField       =   "Dirección"
       DataSource      =   "Adodc1"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   495
       Left            =   3120
       TabIndex        =   9
-      Top             =   4920
-      Width           =   2535
+      Top             =   3600
+      Width           =   3015
    End
    Begin VB.TextBox txtcorreo 
       DataField       =   "Correo"
       DataSource      =   "Adodc1"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   495
       Left            =   3120
       TabIndex        =   8
-      Top             =   4200
-      Width           =   2535
+      Top             =   2640
+      Width           =   3015
    End
    Begin VB.TextBox txtnombre 
       DataField       =   "Nombre"
       DataSource      =   "Adodc1"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   495
-      Left            =   3120
+      Left            =   8640
       TabIndex        =   7
-      Top             =   2520
-      Width           =   2535
+      Top             =   1680
+      Width           =   2895
    End
    Begin VB.TextBox txtcedula 
       DataField       =   "Cédula"
       DataSource      =   "Adodc1"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   495
       Left            =   3120
       TabIndex        =   6
       Top             =   1680
-      Width           =   2535
+      Width           =   3015
    End
    Begin VB.CommandButton cmdanterior 
       Caption         =   "Anterior"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   14.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   495
-      Left            =   7320
+      Left            =   3480
       TabIndex        =   5
-      Top             =   3360
+      Top             =   6480
       Width           =   1815
    End
    Begin VB.CommandButton cmdsiguiente 
       Caption         =   "Siguiente"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   14.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   495
-      Left            =   9720
+      Left            =   7920
       TabIndex        =   4
-      Top             =   3360
+      Top             =   6480
       Width           =   1815
    End
    Begin VB.CommandButton cmdeliminar 
       Caption         =   "Eliminar"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   14.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   495
-      Left            =   9600
+      Left            =   10080
       TabIndex        =   3
-      Top             =   1560
+      Top             =   5160
       Width           =   1815
    End
    Begin VB.CommandButton cmdguardar 
       Caption         =   "Guardar"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   14.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   495
-      Left            =   8400
+      Left            =   5640
       TabIndex        =   2
-      Top             =   2400
+      Top             =   5040
       Width           =   1815
    End
    Begin VB.CommandButton cmdnuevo 
       Caption         =   "Nuevo"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   14.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   495
-      Left            =   7440
+      Left            =   1200
       TabIndex        =   1
-      Top             =   1560
+      Top             =   5040
       Width           =   1815
    End
+   Begin VB.Image Image3 
+      Height          =   840
+      Left            =   1920
+      Picture         =   "Form2.frx":0112
+      Stretch         =   -1  'True
+      Top             =   6240
+      Width           =   960
+   End
+   Begin VB.Image Image2 
+      Height          =   840
+      Left            =   10080
+      Picture         =   "Form2.frx":35FD
+      Stretch         =   -1  'True
+      Top             =   6240
+      Width           =   960
+   End
+   Begin VB.Image Image1 
+      Height          =   1440
+      Left            =   1080
+      Picture         =   "Form2.frx":64C7
+      Stretch         =   -1  'True
+      Top             =   0
+      Width           =   1560
+   End
    Begin VB.Label Label7 
+      BackColor       =   &H00FFFFFF&
       Caption         =   "Apellido"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   15.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   495
-      Left            =   240
+      Left            =   6720
       TabIndex        =   17
-      Top             =   3360
-      Width           =   2415
+      Top             =   2640
+      Width           =   1455
    End
    Begin VB.Label Label6 
+      BackColor       =   &H00FFFFFF&
       Caption         =   "Teléfono"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   15.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   495
-      Left            =   240
+      Left            =   6720
       TabIndex        =   15
-      Top             =   6000
-      Width           =   2535
+      Top             =   3720
+      Width           =   1455
    End
    Begin VB.Label Label5 
+      BackColor       =   &H00FFFFFF&
       Caption         =   "Dirección "
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   15.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   495
-      Left            =   240
+      Left            =   1080
       TabIndex        =   13
-      Top             =   5040
-      Width           =   2535
+      Top             =   3720
+      Width           =   1455
    End
    Begin VB.Label Label1 
+      BackColor       =   &H00FFFFFF&
       Caption         =   "Correo"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   15.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   495
-      Left            =   240
+      Left            =   1080
       TabIndex        =   12
-      Top             =   4200
-      Width           =   2415
+      Top             =   2640
+      Width           =   1455
    End
    Begin VB.Label Label3 
+      BackColor       =   &H00FFFFFF&
       Caption         =   "Cédula"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   15.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   495
-      Left            =   240
+      Left            =   1080
       TabIndex        =   11
-      Top             =   1800
-      Width           =   2415
+      Top             =   1680
+      Width           =   1455
    End
    Begin VB.Label Label2 
+      BackColor       =   &H00FFFFFF&
       Caption         =   "Nombre"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   15.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   375
-      Left            =   240
+      Left            =   6720
       TabIndex        =   10
-      Top             =   2640
-      Width           =   2415
+      Top             =   1680
+      Width           =   1455
    End
    Begin VB.Label Label4 
+      BackColor       =   &H00FFFFFF&
       Caption         =   "Registro de Clientes"
       BeginProperty Font 
-         Name            =   "Nirmala UI"
+         Name            =   "Baskerville Old Face"
          Size            =   36
          Charset         =   0
          Weight          =   700
@@ -210,10 +396,10 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   975
-      Left            =   3240
+      Left            =   3720
       TabIndex        =   0
       Top             =   240
-      Width           =   7335
+      Width           =   6255
    End
 End
 Attribute VB_Name = "Form2"
