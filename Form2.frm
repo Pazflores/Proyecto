@@ -385,6 +385,7 @@ Begin VB.Form Form2
    End
    Begin VB.Label Label4 
       BackColor       =   &H00FFFFFF&
+      BackStyle       =   0  'Transparent
       Caption         =   "Registro de Clientes"
       BeginProperty Font 
          Name            =   "Baskerville Old Face"
