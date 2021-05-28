@@ -1,4 +1,14 @@
 Attribute VB_Name = "Module1"
+'Variables para conexion a la base de datos
+Global Base As New ADODB.Connection
+
+'Variable para acceder a la tabla Usuario
+Global RsCliente As New ADODB.Recordset
+Global RsDetalleFactura As New ADODB.Recordset
+Global RsFactura As New ADODB.Recordset
+Global RsProductos As New ADODB.Recordset
+Global RsTipodeProducto As New ADODB.Recordset
+
 Sub main()
     With Base
         .CursorLocation = adUseClient 'Vamos a ser clientes de la base de datos
