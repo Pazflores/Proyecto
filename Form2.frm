@@ -460,7 +460,6 @@ Adodc1.Recordset.AddNew
 MsgBox "Llene los campos para ingresar un nuevo registro", vbInformation, "Sistema de Registro"
 Exit Sub
 salida:
-MsgBox "Dar clic dos veces en Nuevo para registrar", vbCritical, "Sistema de Registro"
 End Sub
 Private Sub cmdsiguiente_Click()
 On Error Resume Next
@@ -469,6 +468,7 @@ If Adodc1.Recordset.BOF Then
 Adodc1.Recordset.MovePrevious
 End If
 End Sub
+
 
 Private Sub R_Click()
 Form5.Show

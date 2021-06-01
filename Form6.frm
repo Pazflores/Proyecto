@@ -2,7 +2,7 @@ VERSION 5.00
 Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Begin VB.Form Form6 
    BackColor       =   &H00FFFFFF&
-   Caption         =   "Registro de Productos"
+   Caption         =   "Registro de ProductosRegistro de Productos"
    ClientHeight    =   9885
    ClientLeft      =   120
    ClientTop       =   465
@@ -11,6 +11,15 @@ Begin VB.Form Form6
    ScaleHeight     =   9885
    ScaleWidth      =   14550
    StartUpPosition =   3  'Windows Default
+   Begin VB.TextBox Text1 
+      DataField       =   "Id_producto"
+      DataSource      =   "Adodc1"
+      Height          =   495
+      Left            =   9600
+      TabIndex        =   17
+      Top             =   5520
+      Width           =   2655
+   End
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   330
       Left            =   11400
@@ -158,7 +167,7 @@ Begin VB.Form Form6
       Height          =   495
       Left            =   9600
       TabIndex        =   9
-      Top             =   5040
+      Top             =   4560
       Width           =   2655
    End
    Begin VB.TextBox txtnombre 
@@ -204,6 +213,24 @@ Begin VB.Form Form6
       TabIndex        =   1
       Top             =   9000
       Width           =   1815
+   End
+   Begin VB.Label Label7 
+      BackColor       =   &H00FFFFFF&
+      Caption         =   "Id_producto"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   14.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   495
+      Left            =   7200
+      TabIndex        =   18
+      Top             =   5520
+      Width           =   1695
    End
    Begin VB.Image Image2 
       Height          =   840
@@ -297,7 +324,7 @@ Begin VB.Form Form6
       Height          =   495
       Left            =   7200
       TabIndex        =   3
-      Top             =   5040
+      Top             =   4560
       Width           =   1695
    End
    Begin VB.Label Label1 
@@ -354,32 +381,35 @@ End Sub
 Private Sub cmdeliminar_Click()
 On Error GoTo salida
 Adodc1.Recordset.Delete
-MsgBox "Se eliminaron los dato correctamente", vbInformation, "Sistema de Registro"
+MsgBox "Se eliminaron los datos correctamente", vbInformation, "Sistema de productos"
 Adodc1.Recordset.AddNew
 Exit Sub
 salida:
-MsgBox "Los campos estan vacios, busque los datos a eliminar", vbCritical, "Sistema de Registro"
+MsgBox "Los campos estan vacios busque datos a eliminar", vbCritical, "Ssistema de productos"
 End Sub
+
 Private Sub cmdguardar_Click()
 On Error GoTo salida
 Adodc1.Recordset.Update
-MsgBox "Se guardaron los datos correctamente, se han corrido al registro anterior", vbInformation, "Sistema de Registro"
+MsgBox "Se guardaron los datos correctamente al registro anterior", vbInformation, "Sistema de productos"
 Adodc1.Recordset.MovePrevious
 If Adodc1.Recordset.BOF Then
 End If
 Exit Sub
 salida:
-MsgBox "Los campos estan vacios no se pueden guardar hasta llenarlos", vbInformation, "Sistema de Registro"
+MsgBox "Los campos estan vacios no se puede guardar hasta llenarlos", vbInformation, "Sistema de productos"
+
 End Sub
 
 Private Sub cmdnuevo_Click()
 On Error GoTo salida
 Adodc1.Recordset.AddNew
-MsgBox "Llene los campos para ingresar un nuevo registro", vbInformation, "Sistema de Registro"
+MsgBox "Clic a lado del codigo para agregar un nuevo registro", vbInformation, "Sistema de productos"
 Exit Sub
 salida:
-MsgBox "Dar clic dos veces en Nuevo para registrar", vbCritical, "Sistema de Registro"
+MsgBox "Dando clic dos veces en nuevo tienes que registar", vbCritical, "Sistema de productos"
 End Sub
+
 Private Sub cmdsiguiente_Click()
 On Error Resume Next
 Adodc1.Recordset.MoveNext
@@ -387,6 +417,8 @@ If Adodc1.Recordset.BOF Then
 Adodc1.Recordset.MovePrevious
 End If
 End Sub
+
+
 Private Sub R_Click()
 Form5.Show
 Me.Hide
