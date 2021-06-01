@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin VB.Form Form1 
    BackColor       =   &H00FFFFFF&
-   Caption         =   "Form1"
+   Caption         =   "Loguin"
    ClientHeight    =   6810
    ClientLeft      =   120
    ClientTop       =   465
@@ -160,7 +160,7 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub cmdingresar_Click()
 If txtusuario.Text = "Papeleria" And txtcontraseña.Text = "virgendelcisne" Then
-  Form2.Show
+  Form5.Show
   Me.Hide
 Else
 MsgBox "Los datos ingresados no son correctos"
