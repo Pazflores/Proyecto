@@ -1,7 +1,7 @@
 VERSION 5.00
 Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFLXGRD.OCX"
 Begin VB.Form Form3 
-   Caption         =   "Form3"
+   Caption         =   "Factura"
    ClientHeight    =   9600
    ClientLeft      =   120
    ClientTop       =   465
@@ -10,6 +10,23 @@ Begin VB.Form Form3
    ScaleHeight     =   9600
    ScaleWidth      =   9765
    StartUpPosition =   3  'Windows Default
+   Begin VB.CommandButton R 
+      Caption         =   "Regresar al menú"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   14.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   615
+      Left            =   240
+      TabIndex        =   14
+      Top             =   8880
+      Width           =   1815
+   End
    Begin VB.CommandButton Command4 
       Caption         =   "Borrar"
       Height          =   375
@@ -137,3 +154,7 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Private Sub R_Click()
+Form5.Show
+Me.Hide
+End Sub
