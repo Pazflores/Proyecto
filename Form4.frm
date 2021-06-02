@@ -1,4 +1,5 @@
 VERSION 5.00
+Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Object = "{CDE57A40-8B86-11D0-B3C6-00A0C90AEA82}#1.0#0"; "MSDATGRD.OCX"
 Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
 Begin VB.Form Form4 
@@ -6,18 +7,65 @@ Begin VB.Form Form4
    ClientHeight    =   6630
    ClientLeft      =   120
    ClientTop       =   465
-   ClientWidth     =   10440
+   ClientWidth     =   10590
    LinkTopic       =   "Form4"
    ScaleHeight     =   6630
-   ScaleWidth      =   10440
+   ScaleWidth      =   10590
    StartUpPosition =   3  'Windows Default
+   Begin MSAdodcLib.Adodc Adodc1 
+      Height          =   375
+      Left            =   600
+      Top             =   5040
+      Width           =   1815
+      _ExtentX        =   3201
+      _ExtentY        =   661
+      ConnectMode     =   0
+      CursorLocation  =   3
+      IsolationLevel  =   -1
+      ConnectionTimeout=   15
+      CommandTimeout  =   30
+      CursorType      =   3
+      LockType        =   3
+      CommandType     =   2
+      CursorOptions   =   0
+      CacheSize       =   50
+      MaxRecords      =   0
+      BOFAction       =   0
+      EOFAction       =   0
+      ConnectStringType=   1
+      Appearance      =   1
+      BackColor       =   -2147483643
+      ForeColor       =   -2147483640
+      Orientation     =   0
+      Enabled         =   -1
+      Connect         =   $"Form4.frx":0000
+      OLEDBString     =   $"Form4.frx":0088
+      OLEDBFile       =   ""
+      DataSourceName  =   ""
+      OtherAttributes =   ""
+      UserName        =   ""
+      Password        =   ""
+      RecordSource    =   "Productos"
+      Caption         =   "Adodc1"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      _Version        =   393216
+   End
    Begin MSDataGridLib.DataGrid DataGrid1 
+      Bindings        =   "Form4.frx":0110
       Height          =   2535
       Left            =   600
       TabIndex        =   4
       Top             =   2280
-      Width           =   9495
-      _ExtentX        =   16748
+      Width           =   9375
+      _ExtentX        =   16536
       _ExtentY        =   4471
       _Version        =   393216
       HeadLines       =   1
@@ -94,7 +142,7 @@ Begin VB.Form Form4
          Strikethrough   =   0   'False
       EndProperty
       Height          =   615
-      Left            =   8280
+      Left            =   8160
       TabIndex        =   3
       Top             =   5520
       Width           =   1815
@@ -128,7 +176,7 @@ Begin VB.Form Form4
          Strikethrough   =   0   'False
       EndProperty
       Height          =   615
-      Left            =   4560
+      Left            =   3960
       TabIndex        =   0
       Top             =   240
       Width           =   2175
@@ -139,7 +187,25 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Dim cn As New ADODB.Connection
+Private WithEvents rs As ADODB.Recordset
+Attribute rs.VB_VarHelpID = -1
+    
+Private Sub Form_Load()
+    Adodc1.Visible = False
+    FormatoDataGrid
+End Sub
+
 Private Sub R_Click()
     Form5.Show
     Me.Hide
+End Sub
+
+Sub FormatoDataGrid()
+    DataGrid1.Columns(0).Width = 1000
+    DataGrid1.Columns(1).Width = 2000
+    DataGrid1.Columns(2).Width = 1500
+    DataGrid1.Columns(3).Width = 1500
+    DataGrid1.Columns(4).Width = 1500
+    DataGrid1.Columns(5).Width = 1500
 End Sub
