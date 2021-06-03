@@ -3,15 +3,15 @@ Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Object = "{CDE57A40-8B86-11D0-B3C6-00A0C90AEA82}#1.0#0"; "MSDATGRD.OCX"
 Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
 Begin VB.Form Form4 
+   BackColor       =   &H00FFFFFF&
    Caption         =   "Inventario"
    ClientHeight    =   6630
-   ClientLeft      =   120
-   ClientTop       =   465
+   ClientLeft      =   4515
+   ClientTop       =   1935
    ClientWidth     =   10590
    LinkTopic       =   "Form4"
    ScaleHeight     =   6630
    ScaleWidth      =   10590
-   StartUpPosition =   3  'Windows Default
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   375
       Left            =   600
@@ -167,8 +167,8 @@ Begin VB.Form Form4
       BackStyle       =   0  'Transparent
       Caption         =   "Inventario"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   22.5
+         Name            =   "Baskerville Old Face"
+         Size            =   23.25
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -195,6 +195,7 @@ Private Sub Form_Load()
     Adodc1.Visible = False
     FormatoDataGrid
 End Sub
+
 
 Private Sub R_Click()
     Form5.Show
