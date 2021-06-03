@@ -159,6 +159,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub cmdingresar_Click()
+'Contraseña por defecto'
 If txtusuario.Text = "Papeleria" And txtcontraseña.Text = "virgendelcisne" Then
   Form5.Show
   Me.Hide
@@ -170,8 +171,8 @@ txtusuario.SetFocus
 End If
 End Sub
 Private Sub Command1_Click()
+'Mensaje informativo pra cerrar el formulario'
 If MsgBox("Esta seguro que desea cerrar el formulario?", vbQuestion + vbYesNo) = vbYes Then
         Unload Me
     End If
 End Sub
-
