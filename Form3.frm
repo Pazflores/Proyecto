@@ -1,6 +1,7 @@
 VERSION 5.00
 Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFLXGRD.OCX"
 Begin VB.Form Form3 
+<<<<<<< HEAD
    BackColor       =   &H8000000E&
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Form3"
@@ -24,6 +25,17 @@ Begin VB.Form Form3
    ScaleWidth      =   14025
    StartUpPosition =   3  'Windows Default
    Begin VB.CommandButton Command2 
+=======
+   Caption         =   "Factura"
+   ClientHeight    =   9600
+   ClientLeft      =   2805
+   ClientTop       =   1200
+   ClientWidth     =   9765
+   LinkTopic       =   "Form3"
+   ScaleHeight     =   9600
+   ScaleWidth      =   9765
+   Begin VB.CommandButton R 
+>>>>>>> ceca85929f094f1be1c7e9a9826368f81c72ec69
       Caption         =   "Regresar al menú"
       BeginProperty Font 
          Name            =   "Baskerville Old Face"
