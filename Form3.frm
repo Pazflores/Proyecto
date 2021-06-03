@@ -3,13 +3,12 @@ Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFLXGRD.OCX"
 Begin VB.Form Form3 
    Caption         =   "Factura"
    ClientHeight    =   9600
-   ClientLeft      =   120
-   ClientTop       =   465
+   ClientLeft      =   2805
+   ClientTop       =   1200
    ClientWidth     =   9765
    LinkTopic       =   "Form3"
    ScaleHeight     =   9600
    ScaleWidth      =   9765
-   StartUpPosition =   3  'Windows Default
    Begin VB.CommandButton R 
       Caption         =   "Regresar al menú"
       BeginProperty Font 

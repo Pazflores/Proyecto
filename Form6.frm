@@ -3,27 +3,43 @@ Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Begin VB.Form Form6 
    BackColor       =   &H00FFFFFF&
    Caption         =   "Registro de ProductosRegistro de Productos"
-   ClientHeight    =   9885
-   ClientLeft      =   120
-   ClientTop       =   465
-   ClientWidth     =   14550
+   ClientHeight    =   9225
+   ClientLeft      =   3285
+   ClientTop       =   1200
+   ClientWidth     =   13635
    LinkTopic       =   "Form6"
-   ScaleHeight     =   9885
-   ScaleWidth      =   14550
-   StartUpPosition =   3  'Windows Default
-   Begin VB.TextBox Text1 
+   ScaleHeight     =   9225
+   ScaleWidth      =   13635
+   Begin VB.CommandButton cmdInventario 
+      Caption         =   "Inventario"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   14.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   615
+      Left            =   9600
+      TabIndex        =   19
+      Top             =   8400
+      Width           =   1815
+   End
+   Begin VB.TextBox txtId_Producto 
       DataField       =   "Id_producto"
       DataSource      =   "Adodc1"
       Height          =   495
       Left            =   9600
       TabIndex        =   17
-      Top             =   5520
+      Top             =   4920
       Width           =   2655
    End
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   330
-      Left            =   11400
-      Top             =   480
+      Left            =   11280
+      Top             =   600
       Visible         =   0   'False
       Width           =   1695
       _ExtentX        =   2990
@@ -79,9 +95,9 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   1680
+      Left            =   1080
       TabIndex        =   16
-      Top             =   6840
+      Top             =   6000
       Width           =   1815
    End
    Begin VB.CommandButton cmdguardar 
@@ -96,9 +112,9 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   6120
+      Left            =   5520
       TabIndex        =   15
-      Top             =   6840
+      Top             =   6000
       Width           =   1815
    End
    Begin VB.CommandButton cmdeliminar 
@@ -113,9 +129,9 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   10560
+      Left            =   9960
       TabIndex        =   14
-      Top             =   6960
+      Top             =   6120
       Width           =   1815
    End
    Begin VB.CommandButton cmdsiguiente 
@@ -130,9 +146,9 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   8400
+      Left            =   7800
       TabIndex        =   13
-      Top             =   8280
+      Top             =   7440
       Width           =   1815
    End
    Begin VB.CommandButton cmdanterior 
@@ -147,9 +163,9 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   3960
+      Left            =   3360
       TabIndex        =   12
-      Top             =   8280
+      Top             =   7440
       Width           =   1815
    End
    Begin VB.TextBox txtcolor 
@@ -158,7 +174,7 @@ Begin VB.Form Form6
       Height          =   495
       Left            =   2640
       TabIndex        =   11
-      Top             =   5640
+      Top             =   5040
       Width           =   3855
    End
    Begin VB.TextBox txtstock 
@@ -167,7 +183,7 @@ Begin VB.Form Form6
       Height          =   495
       Left            =   9600
       TabIndex        =   9
-      Top             =   4560
+      Top             =   3960
       Width           =   2655
    End
    Begin VB.TextBox txtnombre 
@@ -176,7 +192,7 @@ Begin VB.Form Form6
       Height          =   495
       Left            =   2760
       TabIndex        =   8
-      Top             =   4560
+      Top             =   3960
       Width           =   3735
    End
    Begin VB.TextBox txtprecio 
@@ -185,7 +201,7 @@ Begin VB.Form Form6
       Height          =   495
       Left            =   9480
       TabIndex        =   7
-      Top             =   3120
+      Top             =   2520
       Width           =   2655
    End
    Begin VB.TextBox txtcodigo 
@@ -194,7 +210,7 @@ Begin VB.Form Form6
       Height          =   495
       Left            =   2760
       TabIndex        =   6
-      Top             =   3240
+      Top             =   2640
       Width           =   3735
    End
    Begin VB.CommandButton R 
@@ -209,9 +225,9 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   615
-      Left            =   12360
+      Left            =   11520
       TabIndex        =   1
-      Top             =   9000
+      Top             =   8400
       Width           =   1815
    End
    Begin VB.Label Label7 
@@ -229,31 +245,32 @@ Begin VB.Form Form6
       Height          =   495
       Left            =   7200
       TabIndex        =   18
-      Top             =   5520
+      Top             =   4920
       Width           =   1695
    End
    Begin VB.Image Image2 
       Height          =   840
-      Left            =   10680
+      Left            =   10080
       Picture         =   "Form6.frx":0112
       Stretch         =   -1  'True
-      Top             =   8040
+      Top             =   7200
       Width           =   960
    End
    Begin VB.Image Image3 
       Height          =   840
-      Left            =   2760
+      Left            =   2160
       Picture         =   "Form6.frx":2FDC
       Stretch         =   -1  'True
-      Top             =   8040
+      Top             =   7200
       Width           =   960
    End
    Begin VB.Image Image1 
-      Height          =   1920
-      Left            =   1080
+      Height          =   1800
+      Left            =   1320
       Picture         =   "Form6.frx":64C7
-      Top             =   360
-      Width           =   1920
+      Stretch         =   -1  'True
+      Top             =   240
+      Width           =   1800
    End
    Begin VB.Label Label6 
       BackColor       =   &H00FFFFFF&
@@ -270,7 +287,7 @@ Begin VB.Form Form6
       Height          =   495
       Left            =   600
       TabIndex        =   10
-      Top             =   5640
+      Top             =   5040
       Width           =   1695
    End
    Begin VB.Label Label5 
@@ -288,7 +305,7 @@ Begin VB.Form Form6
       Height          =   495
       Left            =   600
       TabIndex        =   5
-      Top             =   4560
+      Top             =   3960
       Width           =   1695
    End
    Begin VB.Label Label3 
@@ -306,7 +323,7 @@ Begin VB.Form Form6
       Height          =   495
       Left            =   7200
       TabIndex        =   4
-      Top             =   3240
+      Top             =   2640
       Width           =   1695
    End
    Begin VB.Label Label2 
@@ -324,7 +341,7 @@ Begin VB.Form Form6
       Height          =   495
       Left            =   7200
       TabIndex        =   3
-      Top             =   4560
+      Top             =   3960
       Width           =   1695
    End
    Begin VB.Label Label1 
@@ -342,7 +359,7 @@ Begin VB.Form Form6
       Height          =   495
       Left            =   600
       TabIndex        =   2
-      Top             =   3240
+      Top             =   2640
       Width           =   1695
    End
    Begin VB.Label Label4 
@@ -358,10 +375,10 @@ Begin VB.Form Form6
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   975
+      Height          =   855
       Left            =   3720
       TabIndex        =   0
-      Top             =   720
+      Top             =   480
       Width           =   7095
    End
 End
@@ -391,20 +408,43 @@ End Sub
 Private Sub cmdguardar_Click()
 On Error GoTo salida
 Adodc1.Recordset.Update
-MsgBox "Se guardaron los datos correctamente al registro anterior", vbInformation, "Sistema de productos"
-Adodc1.Recordset.MovePrevious
-If Adodc1.Recordset.BOF Then
-End If
-Exit Sub
+    With RsProductos
+        .Requery 'Actualizar la tabla y ubicarnos en el primer registro
+        .AddNew 'Adicionar un nuevo item
+        
+        'Paso los valores de la cajas de texto del formulario a la BD
+        !Código = txtcodigo.Text
+        !Nombre = txtnombre.Text
+        !Precio = txtprecio.Text
+        !Stock = txtstock.Text
+        !Color = txtcolor.Text
+        !Id_producto = txtId_Producto.Text
+        
+        .UpdateBatch 'Grabar en la BD
+    
+    End With
+'MsgBox "Se guardaron los datos correctamente al registro anterior", vbInformation, "Sistema de productos"
+'Adodc1.Recordset.MovePrevious
+'If Adodc1.Recordset.BOF Then
+'End If
+'Exit Sub
 salida:
-MsgBox "Los campos estan vacios no se puede guardar hasta llenarlos", vbInformation, "Sistema de productos"
+'MsgBox "Los campos estan vacios no se puede guardar hasta llenarlos", vbInformation, "Sistema de productos"
+    
+MsgBox "El registro fue guardado correctamente", vbInformation
+LimpiarCajas
+End Sub
 
+Private Sub cmdInventario_Click()
+    Form4.Show
+    Me.Hide
 End Sub
 
 Private Sub cmdnuevo_Click()
 On Error GoTo salida
 Adodc1.Recordset.AddNew
 MsgBox "Clic a lado del codigo para agregar un nuevo registro", vbInformation, "Sistema de productos"
+    txtcodigo.SetFocus
 Exit Sub
 salida:
 MsgBox "Dando clic dos veces en nuevo tienes que registar", vbCritical, "Sistema de productos"
@@ -418,8 +458,16 @@ Adodc1.Recordset.MovePrevious
 End If
 End Sub
 
-
 Private Sub R_Click()
 Form5.Show
 Me.Hide
+End Sub
+
+Private Sub LimpiarCajas()
+    txtcodigo.Text = ""
+    txtnombre.Text = ""
+    txtprecio.Text = ""
+    txtstock.Text = ""
+    txtcolor.Text = ""
+    txtId_Producto.Text = ""
 End Sub

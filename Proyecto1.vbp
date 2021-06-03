@@ -17,6 +17,7 @@ Form=Form5.frm
 Form=Form6.frm
 IconForm="Form1"
 Startup="Form1"
+HelpFile=""
 Command32=""
 Name="Proyecto1"
 HelpContextID="0"
