@@ -12,54 +12,8 @@ Begin VB.Form Form4
    LinkTopic       =   "Form4"
    ScaleHeight     =   6630
    ScaleWidth      =   10590
-   Begin MSAdodcLib.Adodc Adodc1 
-      Height          =   375
-      Left            =   600
-      Top             =   5040
-      Width           =   1815
-      _ExtentX        =   3201
-      _ExtentY        =   661
-      ConnectMode     =   0
-      CursorLocation  =   3
-      IsolationLevel  =   -1
-      ConnectionTimeout=   15
-      CommandTimeout  =   30
-      CursorType      =   3
-      LockType        =   3
-      CommandType     =   2
-      CursorOptions   =   0
-      CacheSize       =   50
-      MaxRecords      =   0
-      BOFAction       =   0
-      EOFAction       =   0
-      ConnectStringType=   1
-      Appearance      =   1
-      BackColor       =   -2147483643
-      ForeColor       =   -2147483640
-      Orientation     =   0
-      Enabled         =   -1
-      Connect         =   $"Form4.frx":0000
-      OLEDBString     =   $"Form4.frx":0088
-      OLEDBFile       =   ""
-      DataSourceName  =   ""
-      OtherAttributes =   ""
-      UserName        =   ""
-      Password        =   ""
-      RecordSource    =   "Productos"
-      Caption         =   "Adodc1"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      _Version        =   393216
-   End
    Begin MSDataGridLib.DataGrid DataGrid1 
-      Bindings        =   "Form4.frx":0110
+      Bindings        =   "Form4.frx":0000
       Height          =   2535
       Left            =   600
       TabIndex        =   4
@@ -68,13 +22,14 @@ Begin VB.Form Form4
       _ExtentX        =   16536
       _ExtentY        =   4471
       _Version        =   393216
+      BorderStyle     =   0
       HeadLines       =   1
       RowHeight       =   15
       BeginProperty HeadFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "MS Sans Serif"
          Size            =   8.25
          Charset         =   0
-         Weight          =   400
+         Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
@@ -122,6 +77,52 @@ Begin VB.Form Form4
          BeginProperty Column01 
          EndProperty
       EndProperty
+   End
+   Begin MSAdodcLib.Adodc Adodc1 
+      Height          =   375
+      Left            =   600
+      Top             =   5040
+      Width           =   1815
+      _ExtentX        =   3201
+      _ExtentY        =   661
+      ConnectMode     =   0
+      CursorLocation  =   3
+      IsolationLevel  =   -1
+      ConnectionTimeout=   15
+      CommandTimeout  =   30
+      CursorType      =   3
+      LockType        =   3
+      CommandType     =   2
+      CursorOptions   =   0
+      CacheSize       =   50
+      MaxRecords      =   0
+      BOFAction       =   0
+      EOFAction       =   0
+      ConnectStringType=   1
+      Appearance      =   1
+      BackColor       =   -2147483643
+      ForeColor       =   -2147483640
+      Orientation     =   0
+      Enabled         =   -1
+      Connect         =   $"Form4.frx":0015
+      OLEDBString     =   $"Form4.frx":009D
+      OLEDBFile       =   ""
+      DataSourceName  =   ""
+      OtherAttributes =   ""
+      UserName        =   ""
+      Password        =   ""
+      RecordSource    =   "Productos"
+      Caption         =   "Adodc1"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      _Version        =   393216
    End
    Begin MSComDlg.CommonDialog CommonDialog1 
       Left            =   9480
@@ -190,10 +191,11 @@ Attribute VB_Exposed = False
 Dim cn As New ADODB.Connection
 Private WithEvents rs As ADODB.Recordset
 Attribute rs.VB_VarHelpID = -1
-    
+
 Private Sub Form_Load()
     Adodc1.Visible = False
     FormatoDataGrid
+    
 End Sub
 
 
