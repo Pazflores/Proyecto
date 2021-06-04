@@ -5,12 +5,12 @@ Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
 Begin VB.Form Form4 
    BackColor       =   &H00FFFFFF&
    Caption         =   "Inventario"
-   ClientHeight    =   6630
-   ClientLeft      =   4515
-   ClientTop       =   1935
+   ClientHeight    =   5340
+   ClientLeft      =   4995
+   ClientTop       =   2670
    ClientWidth     =   10590
    LinkTopic       =   "Form4"
-   ScaleHeight     =   6630
+   ScaleHeight     =   5340
    ScaleWidth      =   10590
    Begin VB.CommandButton RM 
       Caption         =   "Regresar al Menú"
