@@ -3,11 +3,11 @@ Attribute VB_Name = "Module1"
 Global Base As New ADODB.Connection
 
 'Variable para acceder a la tabla Usuario
-Global RsCliente As New ADODB.Recordset
-Global RsDetalleFactura As New ADODB.Recordset
-Global RsFactura As New ADODB.Recordset
+'Global RsCliente As New ADODB.Recordset
+'Global RsDetalleFactura As New ADODB.Recordset
+'Global RsFactura As New ADODB.Recordset
 Global RsProductos As New ADODB.Recordset
-Global RsTipodeProducto As New ADODB.Recordset
+'Global RsTipodeProducto As New ADODB.Recordset
 
 Sub main()
     With Base

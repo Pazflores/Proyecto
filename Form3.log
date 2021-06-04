@@ -1,1 +1,6 @@
-Línea 503: no se puede cargar el archivo C:\Users\PAZ\Desktop\repositorio\Proyecto\Form3.frm.
+Línea 66: la clase MSFlexGridLib.MSFlexGrid del control Lista no era una clase de control cargada.
+Línea 72: el nombre de la propiedad _ExtentX de Lista no es válido.
+Línea 73: el nombre de la propiedad _ExtentY de Lista no es válido.
+Línea 74: el nombre de la propiedad _Version de Lista no es válido.
+Línea 75: el nombre de la propiedad Rows de Lista no es válido.
+Línea 76: el nombre de la propiedad Cols de Lista no es válido.

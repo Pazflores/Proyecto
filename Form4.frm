@@ -1,7 +1,7 @@
 VERSION 5.00
 Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Object = "{CDE57A40-8B86-11D0-B3C6-00A0C90AEA82}#1.0#0"; "MSDATGRD.OCX"
-Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
 Begin VB.Form Form4 
    BackColor       =   &H00FFFFFF&
    Caption         =   "Inventario"
@@ -12,12 +12,29 @@ Begin VB.Form Form4
    LinkTopic       =   "Form4"
    ScaleHeight     =   6630
    ScaleWidth      =   10590
+   Begin VB.CommandButton RM 
+      Caption         =   "Regresar al Menú"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   14.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   735
+      Left            =   7800
+      TabIndex        =   2
+      Top             =   4320
+      Width           =   2175
+   End
    Begin MSDataGridLib.DataGrid DataGrid1 
       Bindings        =   "Form4.frx":0000
       Height          =   2535
       Left            =   600
-      TabIndex        =   4
-      Top             =   2280
+      TabIndex        =   1
+      Top             =   1320
       Width           =   9375
       _ExtentX        =   16536
       _ExtentY        =   4471
@@ -81,7 +98,7 @@ Begin VB.Form Form4
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   375
       Left            =   600
-      Top             =   5040
+      Top             =   4440
       Width           =   1815
       _ExtentX        =   3201
       _ExtentY        =   661
@@ -131,39 +148,6 @@ Begin VB.Form Form4
       _ExtentY        =   847
       _Version        =   393216
    End
-   Begin VB.CommandButton R 
-      Caption         =   "Regresar al menú"
-      BeginProperty Font 
-         Name            =   "Baskerville Old Face"
-         Size            =   14.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   615
-      Left            =   8160
-      TabIndex        =   3
-      Top             =   5520
-      Width           =   1815
-   End
-   Begin VB.TextBox Text1 
-      Height          =   375
-      Left            =   4200
-      TabIndex        =   2
-      Text            =   "Text1"
-      Top             =   1440
-      Width           =   5775
-   End
-   Begin VB.Label Label2 
-      Caption         =   "Label2"
-      Height          =   375
-      Left            =   720
-      TabIndex        =   1
-      Top             =   1440
-      Width           =   2415
-   End
    Begin VB.Label Label1 
       BackStyle       =   0  'Transparent
       Caption         =   "Inventario"
@@ -188,16 +172,12 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-Dim cn As New ADODB.Connection
-Private WithEvents rs As ADODB.Recordset
-Attribute rs.VB_VarHelpID = -1
 
 Private Sub Form_Load()
     Adodc1.Visible = False
     FormatoDataGrid
     
 End Sub
-
 
 Private Sub R_Click()
     Form5.Show
@@ -211,4 +191,9 @@ Sub FormatoDataGrid()
     DataGrid1.Columns(3).Width = 1500
     DataGrid1.Columns(4).Width = 1500
     DataGrid1.Columns(5).Width = 1500
+End Sub
+
+Private Sub RM_Click()
+    Form5.Show
+    Me.Hide
 End Sub
