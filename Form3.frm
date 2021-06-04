@@ -1,12 +1,13 @@
 VERSION 5.00
+Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFLXGRD.OCX"
 Begin VB.Form Form3 
    BackColor       =   &H8000000E&
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Form3"
    ClientHeight    =   10215
-   ClientLeft      =   45
-   ClientTop       =   390
-   ClientWidth     =   13785
+   ClientLeft      =   3210
+   ClientTop       =   885
+   ClientWidth     =   14535
    BeginProperty Font 
       Name            =   "Myanmar Text"
       Size            =   8.25
@@ -20,14 +21,25 @@ Begin VB.Form Form3
    MaxButton       =   0   'False
    MinButton       =   0   'False
    ScaleHeight     =   10215
-   ScaleWidth      =   13785
-   StartUpPosition =   3  'Windows Default
+   ScaleWidth      =   14535
+   Begin MSFlexGridLib.MSFlexGrid Lista 
+      Height          =   2655
+      Left            =   360
+      TabIndex        =   35
+      Top             =   6360
+      Width           =   13095
+      _ExtentX        =   23098
+      _ExtentY        =   4683
+      _Version        =   393216
+      Rows            =   20
+      Cols            =   5
+   End
    Begin VB.CommandButton Command1 
       Caption         =   "Regresar al Menú"
       Height          =   495
       Left            =   0
-      TabIndex        =   35
-      Top             =   9720
+      TabIndex        =   34
+      Top             =   9480
       Width           =   1935
    End
    Begin VB.TextBox Text12 
@@ -42,7 +54,7 @@ Begin VB.Form Form3
       EndProperty
       Height          =   285
       Left            =   1800
-      TabIndex        =   32
+      TabIndex        =   31
       Top             =   5280
       Width           =   3975
    End
@@ -58,18 +70,9 @@ Begin VB.Form Form3
       EndProperty
       Height          =   285
       Left            =   1800
-      TabIndex        =   29
+      TabIndex        =   28
       Top             =   960
       Width           =   3975
-   End
-   Begin VB.PictureBox Lista 
-      Height          =   3135
-      Left            =   840
-      ScaleHeight     =   3075
-      ScaleWidth      =   12195
-      TabIndex        =   28
-      Top             =   6240
-      Width           =   12255
    End
    Begin VB.TextBox Text10 
       BeginProperty Font 
@@ -132,7 +135,7 @@ Begin VB.Form Form3
       Height          =   285
       Left            =   10920
       TabIndex        =   12
-      Top             =   9840
+      Top             =   9600
       Width           =   2175
    End
    Begin VB.TextBox Text6 
@@ -148,7 +151,7 @@ Begin VB.Form Form3
       Height          =   285
       Left            =   8400
       TabIndex        =   11
-      Top             =   9840
+      Top             =   9600
       Width           =   2175
    End
    Begin VB.TextBox Text5 
@@ -164,7 +167,7 @@ Begin VB.Form Form3
       Height          =   285
       Left            =   5880
       TabIndex        =   10
-      Top             =   9840
+      Top             =   9600
       Width           =   2175
    End
    Begin VB.CommandButton Command4 
@@ -181,7 +184,7 @@ Begin VB.Form Form3
       Height          =   375
       Left            =   2400
       TabIndex        =   9
-      Top             =   9720
+      Top             =   9480
       Width           =   2895
    End
    Begin VB.TextBox Text4 
@@ -252,7 +255,7 @@ Begin VB.Form Form3
       Caption         =   "Dirección"
       Height          =   255
       Left            =   360
-      TabIndex        =   34
+      TabIndex        =   33
       Top             =   5280
       Width           =   1095
    End
@@ -268,7 +271,7 @@ Begin VB.Form Form3
       EndProperty
       Height          =   375
       Left            =   360
-      TabIndex        =   33
+      TabIndex        =   32
       Top             =   5760
       Width           =   5415
    End
@@ -276,7 +279,7 @@ Begin VB.Form Form3
       Caption         =   "RUC"
       Height          =   255
       Left            =   360
-      TabIndex        =   31
+      TabIndex        =   30
       Top             =   960
       Width           =   1095
    End
@@ -292,7 +295,7 @@ Begin VB.Form Form3
       EndProperty
       Height          =   375
       Left            =   360
-      TabIndex        =   30
+      TabIndex        =   29
       Top             =   1440
       Width           =   5415
    End
@@ -414,7 +417,7 @@ Begin VB.Form Form3
       Height          =   255
       Left            =   10920
       TabIndex        =   15
-      Top             =   9600
+      Top             =   9360
       Width           =   2175
    End
    Begin VB.Label Label7 
@@ -431,7 +434,7 @@ Begin VB.Form Form3
       Height          =   255
       Left            =   8400
       TabIndex        =   14
-      Top             =   9600
+      Top             =   9360
       Width           =   2175
    End
    Begin VB.Label Label6 
@@ -448,7 +451,7 @@ Begin VB.Form Form3
       Height          =   255
       Left            =   5880
       TabIndex        =   13
-      Top             =   9600
+      Top             =   9360
       Width           =   2175
    End
    Begin VB.Label Label5 
@@ -543,6 +546,11 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Private Sub Command1_Click()
+    Form5.Show
+    Me.Hide
+End Sub
+
 Private Sub Command4_Click()
 tot = tot - a
 Text5.Text = tot
