@@ -5,7 +5,7 @@ Begin VB.Form Form3
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Form3"
    ClientHeight    =   10215
-   ClientLeft      =   3210
+   ClientLeft      =   3465
    ClientTop       =   885
    ClientWidth     =   14535
    BeginProperty Font 
@@ -592,6 +592,7 @@ Lista.Col = 4
 Lista.Row = 0
 Lista.Text = "Total Unico"
 fila = 1
+Label17.Caption = Date
 End Sub
 
 
@@ -623,7 +624,7 @@ End If
 End Sub
 Private Sub Text10_KeyPress(KeyAscii As Integer)
 If KeyAscii = 13 Then
-    Label17.Caption = Text10.Text
+    Label17.Caption = Date
     Text10.Text = ""
     Text2.SetFocus
 End If
