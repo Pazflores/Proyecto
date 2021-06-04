@@ -435,6 +435,7 @@ End Sub
 Private Sub cmdeliminar_Click()
 On Error GoTo salida
 Adodc1.Recordset.Delete
+'Mensaje informativo'
 MsgBox "Se eliminaron los dato correctamente", vbInformation, "Sistema de Registro"
 Adodc1.Recordset.AddNew
 Exit Sub
