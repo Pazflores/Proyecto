@@ -10,6 +10,23 @@ Begin VB.Form Form6
    LinkTopic       =   "Form6"
    ScaleHeight     =   9225
    ScaleWidth      =   13635
+   Begin VB.CommandButton cmdbuscar 
+      Caption         =   "Buscar"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   14.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   495
+      Left            =   5760
+      TabIndex        =   20
+      Top             =   8400
+      Width           =   1815
+   End
    Begin VB.CommandButton cmdInventario 
       Caption         =   "Inventario"
       BeginProperty Font 
@@ -395,11 +412,38 @@ Adodc1.Recordset.MoveNext
 End If
 End Sub
 
+Private Sub cmdbuscar_Click()
+On Error GoTo salida
+Adodc1.Recordset.MovePrevious
+If Adodc1.Recordset.BOF Then
+End If
+'Igualar la variable busqueda al input'
+Dim Busqueda As String
+Busqueda = InputBox("Ingrese el número de código que desea Buscar", "Sistema de Registro")
+'Realizamos la busqueda usando el metodo find'
+Adodc1.Recordset.Find "Código='" & Trim(Busqueda) & "'"
+'Si encuentra resultados que nos muestre en un msgbox'
+If Adodc1.Recordset.EOF Then
+MsgBox "Saliendo de busqueda cédula no encontrada", vbCritical, "Sistema de Registro"
+Exit Sub
+End If
+'Y si encontró resultados mostrar la descripción del cliente en un textbox'
+txtcodigo.Text = Adodc1.Recordset.Fields(0).Value
+txtnombre.Text = Adodc1.Recordset.Fields(1).Value
+txtprecio.Text = Adodc1.Recordset.Fields(2).Value
+txtstock.Text = Adodc1.Recordset.Fields(3).Value
+txtcolor.Text = Adodc1.Recordset.Fields(4).Value
+txtId_Producto.Text = Adodc1.Recordset.Fields(5).Value
+Exit Sub
+salida:
+End Sub
+
 Private Sub cmdeliminar_Click()
 On Error GoTo salida
 Adodc1.Recordset.Delete
 MsgBox "Se eliminaron los datos correctamente", vbInformation, "Sistema de productos"
 Adodc1.Recordset.AddNew
+Adodc1.Refresh
 Exit Sub
 salida:
 MsgBox "Los campos estan vacios busque datos a eliminar", vbCritical, "Ssistema de productos"
