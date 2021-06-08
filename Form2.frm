@@ -11,6 +11,23 @@ Begin VB.Form Form2
    ScaleHeight     =   8025
    ScaleWidth      =   14310
    StartUpPosition =   1  'CenterOwner
+   Begin VB.CommandButton cmdbuscar 
+      Caption         =   "Buscar"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   14.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   495
+      Left            =   11880
+      TabIndex        =   19
+      Top             =   4440
+      Width           =   1815
+   End
    Begin VB.CommandButton R 
       Caption         =   "Regresar al menú"
       BeginProperty Font 
@@ -74,7 +91,7 @@ Begin VB.Form Form2
       Orientation     =   0
       Enabled         =   -1
       Connect         =   $"Form2.frx":0000
-      OLEDBString     =   $"Form2.frx":0088
+      OLEDBString     =   $"Form2.frx":0089
       OLEDBFile       =   ""
       DataSourceName  =   ""
       OtherAttributes =   ""
@@ -271,7 +288,7 @@ Begin VB.Form Form2
    Begin VB.Image Image3 
       Height          =   840
       Left            =   1920
-      Picture         =   "Form2.frx":0110
+      Picture         =   "Form2.frx":0112
       Stretch         =   -1  'True
       Top             =   6240
       Width           =   960
@@ -279,7 +296,7 @@ Begin VB.Form Form2
    Begin VB.Image Image2 
       Height          =   840
       Left            =   10080
-      Picture         =   "Form2.frx":35FB
+      Picture         =   "Form2.frx":35FD
       Stretch         =   -1  'True
       Top             =   6240
       Width           =   960
@@ -287,7 +304,7 @@ Begin VB.Form Form2
    Begin VB.Image Image1 
       Height          =   1440
       Left            =   1080
-      Picture         =   "Form2.frx":64C5
+      Picture         =   "Form2.frx":64C7
       Stretch         =   -1  'True
       Top             =   0
       Width           =   1560
@@ -432,6 +449,33 @@ If Adodc1.Recordset.BOF Then
 Adodc1.Recordset.MoveNext
 End If
 End Sub
+
+Private Sub cmdbuscar_Click()
+On Error GoTo salida
+Adodc1.Recordset.MovePrevious
+If Adodc1.Recordset.BOF Then
+End If
+'Igualar la variable busqueda al input'
+Dim Busqueda As String
+Busqueda = InputBox("Ingrese el número de cédula que desea Buscar", "Sistema de Registro")
+'Realizamos la busqueda usando el metodo find'
+Adodc1.Recordset.Find "Cédula='" & Trim(Busqueda) & "'"
+'Si encuentra resultados que nos muestre en un msgbox'
+If Adodc1.Recordset.EOF Then
+MsgBox "Saliendo de busqueda cédula no encontrada", vbCritical, "Sistema de Registro"
+Exit Sub
+End If
+'Y si encontró resultados mostrar la descripción del cliente en un textbox'
+txtcedula.Text = Adodc1.Recordset.Fields(0).Value
+txtnombre.Text = Adodc1.Recordset.Fields(1).Value
+txtapellido.Text = Adodc1.Recordset.Fields(2).Value
+txtdireccion.Text = Adodc1.Recordset.Fields(3).Value
+txttelefono.Text = Adodc1.Recordset.Fields(4).Value
+txtcorreo.Text = Adodc1.Recordset.Fields(5).Value
+Exit Sub
+salida:
+End Sub
+
 Private Sub cmdeliminar_Click()
 Adodc1.Recordset.Delete
 Adodc1.Recordset.MoveNext
