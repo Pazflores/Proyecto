@@ -1,13 +1,14 @@
 VERSION 5.00
+Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFLXGRD.OCX"
 Begin VB.Form Form3 
    BackColor       =   &H8000000E&
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Form3"
-   ClientHeight    =   10215
-   ClientLeft      =   3465
-   ClientTop       =   885
-   ClientWidth     =   14535
+   ClientHeight    =   10695
+   ClientLeft      =   45
+   ClientTop       =   390
+   ClientWidth     =   14265
    BeginProperty Font 
       Name            =   "Myanmar Text"
       Size            =   8.25
@@ -20,26 +21,199 @@ Begin VB.Form Form3
    LinkTopic       =   "Form3"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   ScaleHeight     =   10215
-   ScaleWidth      =   14535
-   Begin MSFlexGridLib.MSFlexGrid Lista 
-      Height          =   2655
+   ScaleHeight     =   10695
+   ScaleWidth      =   14265
+   StartUpPosition =   3  'Windows Default
+   Begin VB.OptionButton Option2 
+      Caption         =   "Option2"
+      Height          =   375
+      Left            =   2160
+      TabIndex        =   47
+      Top             =   600
+      Width           =   1335
+   End
+   Begin VB.OptionButton Option1 
+      Caption         =   "Option1"
+      Height          =   375
       Left            =   360
-      TabIndex        =   35
-      Top             =   6360
-      Width           =   13095
-      _ExtentX        =   23098
-      _ExtentY        =   4683
+      TabIndex        =   46
+      Top             =   600
+      Width           =   1215
+   End
+   Begin VB.TextBox Text10 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   285
+      Left            =   9000
+      TabIndex        =   45
+      Top             =   3720
+      Width           =   4095
+   End
+   Begin VB.CommandButton Command3 
+      Caption         =   "Buscar Producto"
+      Height          =   420
+      Left            =   8880
+      TabIndex        =   44
+      Top             =   6240
+      Width           =   3615
+   End
+   Begin VB.ComboBox Combo1 
+      Height          =   420
+      Left            =   7680
+      TabIndex        =   43
+      Top             =   3120
+      Width           =   5415
+   End
+   Begin VB.TextBox Text13 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   285
+      Left            =   9120
+      TabIndex        =   41
+      Top             =   4440
+      Width           =   3975
+   End
+   Begin VB.CommandButton Command5 
+      Caption         =   "Buscar Cliente"
+      Height          =   420
+      Left            =   1200
+      TabIndex        =   39
+      Top             =   6480
+      Width           =   3255
+   End
+   Begin VB.Timer Timer1 
+      Left            =   14880
+      Top             =   6840
+   End
+   Begin VB.CommandButton Command2 
+      Caption         =   "Finalizar Compra"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   2280
+      TabIndex        =   36
+      Top             =   10200
+      Width           =   2895
+   End
+   Begin MSAdodcLib.Adodc Adodc2 
+      Height          =   375
+      Left            =   14280
+      Top             =   5760
+      Width           =   1200
+      _ExtentX        =   2117
+      _ExtentY        =   661
+      ConnectMode     =   0
+      CursorLocation  =   3
+      IsolationLevel  =   -1
+      ConnectionTimeout=   15
+      CommandTimeout  =   30
+      CursorType      =   3
+      LockType        =   3
+      CommandType     =   2
+      CursorOptions   =   0
+      CacheSize       =   50
+      MaxRecords      =   0
+      BOFAction       =   0
+      EOFAction       =   0
+      ConnectStringType=   1
+      Appearance      =   1
+      BackColor       =   -2147483643
+      ForeColor       =   -2147483640
+      Orientation     =   0
+      Enabled         =   -1
+      Connect         =   ""
+      OLEDBString     =   ""
+      OLEDBFile       =   ""
+      DataSourceName  =   ""
+      OtherAttributes =   ""
+      UserName        =   ""
+      Password        =   ""
+      RecordSource    =   "Productos"
+      Caption         =   "Adodc2"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Myanmar Text"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       _Version        =   393216
-      Rows            =   20
-      Cols            =   5
+   End
+   Begin MSAdodcLib.Adodc Adodc1 
+      Height          =   375
+      Left            =   14280
+      Top             =   5160
+      Width           =   1200
+      _ExtentX        =   2117
+      _ExtentY        =   661
+      ConnectMode     =   0
+      CursorLocation  =   3
+      IsolationLevel  =   -1
+      ConnectionTimeout=   15
+      CommandTimeout  =   30
+      CursorType      =   3
+      LockType        =   3
+      CommandType     =   2
+      CursorOptions   =   0
+      CacheSize       =   50
+      MaxRecords      =   0
+      BOFAction       =   0
+      EOFAction       =   0
+      ConnectStringType=   1
+      Appearance      =   1
+      BackColor       =   -2147483643
+      ForeColor       =   -2147483640
+      Orientation     =   0
+      Enabled         =   -1
+      Connect         =   ""
+      OLEDBString     =   ""
+      OLEDBFile       =   ""
+      DataSourceName  =   ""
+      OtherAttributes =   ""
+      UserName        =   ""
+      Password        =   ""
+      RecordSource    =   "Cliente"
+      Caption         =   "Adodc1"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Myanmar Text"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      _Version        =   393216
    End
    Begin VB.CommandButton Command1 
       Caption         =   "Regresar al Menú"
-      Height          =   495
-      Left            =   0
+      Height          =   855
+      Left            =   120
       TabIndex        =   34
-      Top             =   9480
+      Top             =   9720
       Width           =   1935
    End
    Begin VB.TextBox Text12 
@@ -53,10 +227,10 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   1800
+      Left            =   1920
       TabIndex        =   31
-      Top             =   5280
-      Width           =   3975
+      Top             =   5640
+      Width           =   3855
    End
    Begin VB.TextBox Text11 
       BeginProperty Font 
@@ -71,24 +245,20 @@ Begin VB.Form Form3
       Height          =   285
       Left            =   1800
       TabIndex        =   28
-      Top             =   960
-      Width           =   3975
+      Top             =   1320
+      Width           =   3855
    End
-   Begin VB.TextBox Text10 
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   285
-      Left            =   11640
-      TabIndex        =   26
-      Top             =   1440
-      Width           =   1815
+   Begin MSFlexGridLib.MSFlexGrid Lista 
+      Height          =   2535
+      Left            =   960
+      TabIndex        =   27
+      Top             =   7080
+      Width           =   12255
+      _ExtentX        =   21616
+      _ExtentY        =   4471
+      _Version        =   393216
+      Rows            =   20
+      Cols            =   5
    End
    Begin VB.TextBox Text9 
       BeginProperty Font 
@@ -101,10 +271,10 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   1800
+      Left            =   1920
       TabIndex        =   23
-      Top             =   4200
-      Width           =   3975
+      Top             =   4680
+      Width           =   3855
    End
    Begin VB.TextBox Text8 
       BeginProperty Font 
@@ -117,10 +287,10 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   1800
+      Left            =   1920
       TabIndex        =   20
-      Top             =   3120
-      Width           =   3975
+      Top             =   3720
+      Width           =   3855
    End
    Begin VB.TextBox Text7 
       BeginProperty Font 
@@ -133,9 +303,9 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   10920
+      Left            =   11040
       TabIndex        =   12
-      Top             =   9600
+      Top             =   10200
       Width           =   2175
    End
    Begin VB.TextBox Text6 
@@ -149,9 +319,9 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   8400
+      Left            =   8520
       TabIndex        =   11
-      Top             =   9600
+      Top             =   10200
       Width           =   2175
    End
    Begin VB.TextBox Text5 
@@ -165,9 +335,9 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   5880
+      Left            =   6000
       TabIndex        =   10
-      Top             =   9600
+      Top             =   10200
       Width           =   2175
    End
    Begin VB.CommandButton Command4 
@@ -182,9 +352,9 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   375
-      Left            =   2400
+      Left            =   2280
       TabIndex        =   9
-      Top             =   9480
+      Top             =   9720
       Width           =   2895
    End
    Begin VB.TextBox Text4 
@@ -198,10 +368,10 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   1800
+      Left            =   1920
       TabIndex        =   8
-      Top             =   2040
-      Width           =   3975
+      Top             =   2640
+      Width           =   3855
    End
    Begin VB.TextBox Text3 
       BeginProperty Font 
@@ -214,9 +384,9 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   9480
+      Left            =   9120
       TabIndex        =   6
-      Top             =   4080
+      Top             =   5400
       Width           =   3975
    End
    Begin VB.TextBox Text2 
@@ -230,9 +400,9 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   9480
+      Left            =   9120
       TabIndex        =   4
-      Top             =   3480
+      Top             =   4920
       Width           =   3975
    End
    Begin VB.TextBox Text1 
@@ -246,18 +416,107 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   9480
+      Left            =   9120
       TabIndex        =   2
-      Top             =   4680
+      Top             =   5880
       Width           =   3975
+   End
+   Begin VB.Line Line2 
+      BorderWidth     =   5
+      X1              =   6720
+      X2              =   6720
+      Y1              =   360
+      Y2              =   6960
+   End
+   Begin VB.Line Line1 
+      BorderWidth     =   3
+      X1              =   6720
+      X2              =   13800
+      Y1              =   4200
+      Y2              =   4200
+   End
+   Begin VB.Label Label26 
+      Caption         =   "Codigo"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   255
+      Left            =   7680
+      TabIndex        =   42
+      Top             =   4440
+      Width           =   1215
+   End
+   Begin VB.Label Label25 
+      Caption         =   "Forma de busqueda"
+      Height          =   255
+      Left            =   7680
+      TabIndex        =   40
+      Top             =   2760
+      Width           =   5415
+   End
+   Begin VB.Label Label23 
+      Caption         =   "Hora"
+      BeginProperty Font 
+         Name            =   "Myanmar Text"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   9120
+      TabIndex        =   38
+      Top             =   1200
+      Width           =   735
+   End
+   Begin VB.Label Label22 
+      BeginProperty Font 
+         Name            =   "Myanmar Text"
+         Size            =   14.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   9960
+      TabIndex        =   37
+      Top             =   1200
+      Width           =   1275
+   End
+   Begin VB.Label Label24 
+      Caption         =   "Buscar"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   255
+      Left            =   7680
+      TabIndex        =   35
+      Top             =   3720
+      Width           =   1215
    End
    Begin VB.Label Label21 
       Caption         =   "Dirección"
       Height          =   255
       Left            =   360
       TabIndex        =   33
-      Top             =   5280
-      Width           =   1095
+      Top             =   5640
+      Width           =   1215
    End
    Begin VB.Label Label20 
       BeginProperty Font 
@@ -272,16 +531,16 @@ Begin VB.Form Form3
       Height          =   375
       Left            =   360
       TabIndex        =   32
-      Top             =   5760
+      Top             =   6000
       Width           =   5415
    End
    Begin VB.Label Label19 
-      Caption         =   "RUC"
+      Caption         =   "Cédula"
       Height          =   255
-      Left            =   360
+      Left            =   240
       TabIndex        =   30
-      Top             =   960
-      Width           =   1095
+      Top             =   1320
+      Width           =   1215
    End
    Begin VB.Label Label18 
       BeginProperty Font 
@@ -294,33 +553,42 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   375
-      Left            =   360
+      Left            =   240
       TabIndex        =   29
-      Top             =   1440
+      Top             =   1680
       Width           =   5415
    End
    Begin VB.Label Label17 
       BeginProperty Font 
          Name            =   "Myanmar Text"
-         Size            =   8.25
+         Size            =   14.25
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   255
-      Left            =   11640
-      TabIndex        =   27
-      Top             =   1800
-      Width           =   1815
+      Height          =   375
+      Left            =   12240
+      TabIndex        =   26
+      Top             =   1200
+      Width           =   1275
    End
    Begin VB.Label Label16 
       Caption         =   "Fecha"
-      Height          =   255
-      Left            =   10800
+      BeginProperty Font 
+         Name            =   "Myanmar Text"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   11400
       TabIndex        =   25
-      Top             =   1800
+      Top             =   1200
       Width           =   735
    End
    Begin VB.Label Label15 
@@ -336,7 +604,7 @@ Begin VB.Form Form3
       Height          =   375
       Left            =   360
       TabIndex        =   24
-      Top             =   4680
+      Top             =   5040
       Width           =   5415
    End
    Begin VB.Label Label14 
@@ -344,8 +612,8 @@ Begin VB.Form Form3
       Height          =   255
       Left            =   360
       TabIndex        =   22
-      Top             =   4200
-      Width           =   1095
+      Top             =   4680
+      Width           =   1215
    End
    Begin VB.Label Label13 
       BeginProperty Font 
@@ -360,7 +628,7 @@ Begin VB.Form Form3
       Height          =   375
       Left            =   360
       TabIndex        =   21
-      Top             =   3600
+      Top             =   4080
       Width           =   5415
    End
    Begin VB.Label Label12 
@@ -368,8 +636,8 @@ Begin VB.Form Form3
       Height          =   255
       Left            =   360
       TabIndex        =   19
-      Top             =   3120
-      Width           =   1095
+      Top             =   3720
+      Width           =   1215
    End
    Begin VB.Label Label11 
       BeginProperty Font 
@@ -384,15 +652,15 @@ Begin VB.Form Form3
       Height          =   375
       Left            =   360
       TabIndex        =   18
-      Top             =   2520
+      Top             =   3000
       Width           =   5415
    End
    Begin VB.Label Label10 
       Caption         =   "Datos Del Producto"
       Height          =   375
-      Left            =   8040
+      Left            =   7680
       TabIndex        =   17
-      Top             =   2400
+      Top             =   2280
       Width           =   5415
    End
    Begin VB.Label Label9 
@@ -400,7 +668,7 @@ Begin VB.Form Form3
       Height          =   375
       Left            =   360
       TabIndex        =   16
-      Top             =   240
+      Top             =   120
       Width           =   5415
    End
    Begin VB.Label Label8 
@@ -415,9 +683,9 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   10920
+      Left            =   11040
       TabIndex        =   15
-      Top             =   9360
+      Top             =   9960
       Width           =   2175
    End
    Begin VB.Label Label7 
@@ -432,9 +700,9 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   8400
+      Left            =   8520
       TabIndex        =   14
-      Top             =   9360
+      Top             =   9960
       Width           =   2175
    End
    Begin VB.Label Label6 
@@ -449,9 +717,9 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   5880
+      Left            =   6000
       TabIndex        =   13
-      Top             =   9360
+      Top             =   9960
       Width           =   2175
    End
    Begin VB.Label Label5 
@@ -468,7 +736,7 @@ Begin VB.Form Form3
       Height          =   255
       Left            =   360
       TabIndex        =   7
-      Top             =   2040
+      Top             =   2640
       Width           =   1215
    End
    Begin VB.Label Label4 
@@ -483,9 +751,9 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   8040
+      Left            =   7680
       TabIndex        =   5
-      Top             =   4080
+      Top             =   5400
       Width           =   1215
    End
    Begin VB.Label Label3 
@@ -500,9 +768,9 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   8040
+      Left            =   7680
       TabIndex        =   3
-      Top             =   3480
+      Top             =   4920
       Width           =   1215
    End
    Begin VB.Label Label2 
@@ -517,14 +785,15 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   8040
+      Left            =   7680
       TabIndex        =   1
-      Top             =   4680
+      Top             =   5880
       Width           =   1215
    End
    Begin VB.Label Label1 
+      AutoSize        =   -1  'True
       BackStyle       =   0  'Transparent
-      Caption         =   "Virgen de Cisne"
+      Caption         =   "Virgen del Cisne"
       BeginProperty Font 
          Name            =   "MV Boli"
          Size            =   39
@@ -534,11 +803,11 @@ Begin VB.Form Form3
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   1335
-      Left            =   7080
+      Height          =   1020
+      Left            =   7800
       TabIndex        =   0
       Top             =   120
-      Width           =   5895
+      Width           =   5910
    End
 End
 Attribute VB_Name = "Form3"
@@ -546,27 +815,44 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-Private Sub Command1_Click()
-    Form5.Show
-    Me.Hide
+Private Sub Command3_Click()
+If Text10.Text = "" Then
+    MsgBox "Llenar la opcion buscar", vbCritical, "Llenar casilla "
+ElseIf Combo1.Text = "" Then
+    MsgBox "Porfavor seleccione una de las opciones para continuar", vbCritical, "Elija una opción"
+Else
+    Adodc2.Recordset.Find "Código='" & Combo1.Text & " " & Text10.Text & "'"
+    If Adodc2.Recordset.EOF = False And Adodc2.Recordset.BOF = False Then
+        Text13.Text = Adodc2.Recordset.Fields = ("Código")
+        Text2.Text = Adodc2.Recordset.Fields = ("Producto")
+        Text3.Text = Adodc2.Recordset.Fields = ("Precio")
+        Text10.Text = ""
+        Text10.SetFocus
+    Else
+        MsgBox "No se ha podido encontrar el archivo deseado", vbCritical, "Archivo no encontrado"
+        Adodc2.Recordset.MoveFirst
+    End If
+End If
 End Sub
 
-Private Sub Command4_Click()
-tot = tot - a
-Text5.Text = tot
-fila = fila - 1
-Lista.Col = 1
-Lista.Row = fila
-Lista.Text = ""
-Lista.Col = 2
-Lista.Row = fila
-Lista.Text = ""
-Lista.Col = 3
-Lista.Row = fila
-Lista.Text = ""
-Lista.Col = 4
-Lista.Row = fila
-Lista.Text = ""
+Private Sub Command5_Click()
+If Text10.Text = "" Then
+    MsgBox "Llenar la opcion buscar", vbCritical, "Llenar casilla "
+ElseIf Combo1.Text = "" Then
+    MsgBox "Porfavor seleccione una de las opciones para continuar", vbCritical, "Elija una opción"
+Else
+    Adodc2.Recordset.Find "Código='" & Combo1.Text & " " & Text10.Text & "'"
+    If Adodc2.Recordset.EOF = False And Adodc2.Recordset.BOF = False Then
+        Text13.Text = Adodc2.Recordset.Fields = ("Código")
+        Text2.Text = Adodc2.Recordset.Fields = ("Producto")
+        Text3.Text = Adodc2.Recordset.Fields = ("Precio")
+        Text10.Text = ""
+        Text10.SetFocus
+    Else
+        MsgBox "No se ha podido encontrar el archivo deseado", vbCritical, "Archivo no encontrado"
+        Adodc2.Recordset.MoveFirst
+    End If
+End If
 End Sub
 
 Private Sub Form_Load()
@@ -592,9 +878,7 @@ Lista.Col = 4
 Lista.Row = 0
 Lista.Text = "Total Unico"
 fila = 1
-Label17.Caption = Date
 End Sub
-
 
 Private Sub Text1_KeyPress(KeyAscii As Integer)
 If KeyAscii = 13 Then
@@ -622,33 +906,20 @@ If KeyAscii = 13 Then
     Text7.Text = tot + Val(Text6.Text)
 End If
 End Sub
-Private Sub Text10_KeyPress(KeyAscii As Integer)
-If KeyAscii = 13 Then
-    Label17.Caption = Date
-    Text10.Text = ""
-    Text2.SetFocus
-End If
-End Sub
-Private Sub Text11_KeyPress(KeyAscii As Integer)
-If KeyAscii = 13 Then
-    Label18.Caption = Text11.Text
-    Text11.Text = ""
-    Text4.SetFocus
-End If
-End Sub
+
+
 Private Sub Text12_KeyPress(KeyAscii As Integer)
 If KeyAscii = 13 Then
-    Label20.Caption = Text12.Text
-    Text12.Text = ""
+    Text13.SetFocus
+End If
+End Sub
+
+Private Sub Text13_KeyPress(KeyAscii As Integer)
+If KeyAscii = 13 Then
     Text2.SetFocus
 End If
 End Sub
 
-Private Sub Text2_KeyPress(KeyAscii As Integer)
-If KeyAscii = 13 Then
-    Text3.SetFocus
-End If
-End Sub
 Private Sub Text3_KeyPress(KeyAscii As Integer)
 If KeyAscii = 13 Then
     Text1.SetFocus
@@ -668,10 +939,20 @@ If KeyAscii = 13 Then
     Text9.SetFocus
 End If
 End Sub
+
+Private Sub Text80_Change()
+   
+End Sub
+
 Private Sub Text9_KeyPress(KeyAscii As Integer)
 If KeyAscii = 13 Then
     Label15.Caption = Text9.Text
     Text9.Text = ""
     Text12.SetFocus
 End If
+End Sub
+
+Private Sub Timer1_Timer()
+Label17.Caption = Date
+Label22.Caption = Time
 End Sub
