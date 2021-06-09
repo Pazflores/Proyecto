@@ -81,7 +81,7 @@ Begin VB.Form Form6
       Orientation     =   0
       Enabled         =   -1
       Connect         =   $"Form6.frx":0000
-      OLEDBString     =   $"Form6.frx":0089
+      OLEDBString     =   $"Form6.frx":008C
       OLEDBFile       =   ""
       DataSourceName  =   ""
       OtherAttributes =   ""
@@ -268,7 +268,7 @@ Begin VB.Form Form6
    Begin VB.Image Image2 
       Height          =   840
       Left            =   10080
-      Picture         =   "Form6.frx":0112
+      Picture         =   "Form6.frx":0118
       Stretch         =   -1  'True
       Top             =   7200
       Width           =   960
@@ -276,7 +276,7 @@ Begin VB.Form Form6
    Begin VB.Image Image3 
       Height          =   840
       Left            =   2160
-      Picture         =   "Form6.frx":2FDC
+      Picture         =   "Form6.frx":2FE2
       Stretch         =   -1  'True
       Top             =   7200
       Width           =   960
@@ -284,7 +284,7 @@ Begin VB.Form Form6
    Begin VB.Image Image1 
       Height          =   1800
       Left            =   1320
-      Picture         =   "Form6.frx":64C7
+      Picture         =   "Form6.frx":64CD
       Stretch         =   -1  'True
       Top             =   240
       Width           =   1800
@@ -421,7 +421,7 @@ End If
 Dim Busqueda As String
 Busqueda = InputBox("Ingrese el número de código que desea Buscar", "Sistema de Registro")
 'Realizamos la busqueda usando el metodo find'
-Adodc1.Recordset.Find "Código='" & Trim(Busqueda) & "'"
+Adodc1.Recordset.Find "Codigo='" & Trim(Busqueda) & "'"
 'Si encuentra resultados que nos muestre en un msgbox'
 If Adodc1.Recordset.EOF Then
 MsgBox "Saliendo de busqueda cédula no encontrada", vbCritical, "Sistema de Registro"

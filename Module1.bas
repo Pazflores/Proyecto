@@ -12,8 +12,10 @@ Sub main()
     With Base
         .CursorLocation = adUseClient 'Vamos a ser clientes de la base de datos
         'Conexion a la base de datos
-        .Open " Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\PAZ\Desktop\repositorio\Proyecto\Base_de_Datos.mdb;Persist Security Info=False "
+        .Open " Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\gguam\Desktop\Liceo\Grupo_5\Proyecto\Base_de_Datos.mdb;Persist Security Info=False"
+        '.Open " Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\PAZ\Desktop\repositorio\Proyecto\Base_de_Datos.mdb;Persist Security Info=False "
         'no borrar porfa.Open " Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Karen\Desktop\Papeleria\Proyecto\Base_de_Datos.mdb;Persist Security Info=False"
+        Form3.Show
     End With
 End Sub
 

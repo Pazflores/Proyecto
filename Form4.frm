@@ -86,7 +86,7 @@ Begin VB.Form Form4
             HaveTrueFalseNull=   0
             FirstDayOfWeek  =   0
             FirstWeekOfYear =   0
-            LCID            =   22538
+            LCID            =   12298
             SubFormatType   =   0
          EndProperty
       EndProperty
@@ -99,7 +99,7 @@ Begin VB.Form Form4
             HaveTrueFalseNull=   0
             FirstDayOfWeek  =   0
             FirstWeekOfYear =   0
-            LCID            =   22538
+            LCID            =   12298
             SubFormatType   =   0
          EndProperty
       EndProperty
@@ -138,7 +138,7 @@ Begin VB.Form Form4
       Orientation     =   0
       Enabled         =   -1
       Connect         =   $"Form4.frx":004D
-      OLEDBString     =   $"Form4.frx":00D5
+      OLEDBString     =   $"Form4.frx":00D9
       OLEDBFile       =   ""
       DataSourceName  =   ""
       OtherAttributes =   ""

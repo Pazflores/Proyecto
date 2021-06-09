@@ -5,10 +5,10 @@ Begin VB.Form Form3
    BackColor       =   &H8000000E&
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Form3"
-   ClientHeight    =   10695
+   ClientHeight    =   12075
    ClientLeft      =   45
    ClientTop       =   390
-   ClientWidth     =   14265
+   ClientWidth     =   16815
    BeginProperty Font 
       Name            =   "Myanmar Text"
       Size            =   8.25
@@ -21,8 +21,8 @@ Begin VB.Form Form3
    LinkTopic       =   "Form3"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   ScaleHeight     =   10695
-   ScaleWidth      =   14265
+   ScaleHeight     =   12075
+   ScaleWidth      =   16815
    StartUpPosition =   3  'Windows Default
    Begin VB.OptionButton Option2 
       Caption         =   "Option2"
@@ -66,7 +66,9 @@ Begin VB.Form Form3
    End
    Begin VB.ComboBox Combo1 
       Height          =   420
+      ItemData        =   "Form3.frx":0000
       Left            =   7680
+      List            =   "Form3.frx":0002
       TabIndex        =   43
       Top             =   3120
       Width           =   5415
@@ -142,8 +144,8 @@ Begin VB.Form Form3
       ForeColor       =   -2147483640
       Orientation     =   0
       Enabled         =   -1
-      Connect         =   ""
-      OLEDBString     =   ""
+      Connect         =   $"Form3.frx":0004
+      OLEDBString     =   $"Form3.frx":0090
       OLEDBFile       =   ""
       DataSourceName  =   ""
       OtherAttributes =   ""
@@ -816,21 +818,27 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub Command3_Click()
+Productos
 If Text10.Text = "" Then
     MsgBox "Llenar la opcion buscar", vbCritical, "Llenar casilla "
 ElseIf Combo1.Text = "" Then
     MsgBox "Porfavor seleccione una de las opciones para continuar", vbCritical, "Elija una opción"
 Else
-    Adodc2.Recordset.Find "Código='" & Combo1.Text & " " & Text10.Text & "'"
-    If Adodc2.Recordset.EOF = False And Adodc2.Recordset.BOF = False Then
-        Text13.Text = Adodc2.Recordset.Fields = ("Código")
-        Text2.Text = Adodc2.Recordset.Fields = ("Producto")
-        Text3.Text = Adodc2.Recordset.Fields = ("Precio")
+    RsProductos.MoveFirst
+    RsProductos.Find "Codigo='" & Text10.Text & "'"
+    If RsProductos.EOF Then
+    MsgBox "NOo se encontro"
+    End If
+    
+    If RsProductos.EOF = False And RsProductos.BOF = False Then
+        Text13.Text = RsProductos.Fields(1).Value
+        Text2.Text = RsProductos.Fields(2).Value
+        Text3.Text = RsProductos.Fields(3).Value
         Text10.Text = ""
         Text10.SetFocus
     Else
         MsgBox "No se ha podido encontrar el archivo deseado", vbCritical, "Archivo no encontrado"
-        Adodc2.Recordset.MoveFirst
+        RsProductos.MoveFirst
     End If
 End If
 End Sub
@@ -856,6 +864,7 @@ End If
 End Sub
 
 Private Sub Form_Load()
+Combo1.AddItem ("id")
 Lista.ColWidth(0) = 10
 Lista.ColWidth(1) = 3000
 Lista.ColAlignment(1) = 5
