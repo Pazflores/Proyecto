@@ -5,13 +5,29 @@ Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
 Begin VB.Form Form4 
    BackColor       =   &H00FFFFFF&
    Caption         =   "Inventario"
-   ClientHeight    =   5340
+   ClientHeight    =   6585
    ClientLeft      =   4995
    ClientTop       =   2670
    ClientWidth     =   10590
    LinkTopic       =   "Form4"
-   ScaleHeight     =   5340
+   ScaleHeight     =   6585
    ScaleWidth      =   10590
+   Begin VB.TextBox txtBuscar 
+      Height          =   405
+      Left            =   4320
+      TabIndex        =   5
+      Top             =   1200
+      Width           =   3375
+   End
+   Begin VB.ComboBox Combo1 
+      Height          =   315
+      ItemData        =   "Form4.frx":0000
+      Left            =   1920
+      List            =   "Form4.frx":0010
+      TabIndex        =   4
+      Top             =   1200
+      Width           =   2055
+   End
    Begin VB.CommandButton RM 
       Caption         =   "Regresar al Menú"
       BeginProperty Font 
@@ -26,15 +42,15 @@ Begin VB.Form Form4
       Height          =   735
       Left            =   7800
       TabIndex        =   2
-      Top             =   4320
+      Top             =   4920
       Width           =   2175
    End
    Begin MSDataGridLib.DataGrid DataGrid1 
-      Bindings        =   "Form4.frx":0000
+      Bindings        =   "Form4.frx":0038
       Height          =   2535
       Left            =   600
       TabIndex        =   1
-      Top             =   1320
+      Top             =   1920
       Width           =   9375
       _ExtentX        =   16536
       _ExtentY        =   4471
@@ -98,7 +114,7 @@ Begin VB.Form Form4
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   375
       Left            =   600
-      Top             =   4440
+      Top             =   5040
       Width           =   1815
       _ExtentX        =   3201
       _ExtentY        =   661
@@ -121,8 +137,8 @@ Begin VB.Form Form4
       ForeColor       =   -2147483640
       Orientation     =   0
       Enabled         =   -1
-      Connect         =   $"Form4.frx":0015
-      OLEDBString     =   $"Form4.frx":009D
+      Connect         =   $"Form4.frx":004D
+      OLEDBString     =   $"Form4.frx":00D5
       OLEDBFile       =   ""
       DataSourceName  =   ""
       OtherAttributes =   ""
@@ -148,6 +164,15 @@ Begin VB.Form Form4
       _ExtentY        =   847
       _Version        =   393216
    End
+   Begin VB.Label Label2 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Buscar por: "
+      Height          =   255
+      Left            =   600
+      TabIndex        =   3
+      Top             =   1200
+      Width           =   1575
+   End
    Begin VB.Label Label1 
       BackStyle       =   0  'Transparent
       Caption         =   "Inventario"
@@ -172,11 +197,20 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Dim Buscar As String
 
 Private Sub Form_Load()
     Adodc1.Visible = False
     FormatoDataGrid
     
+    main
+    Productos
+    Adodc1.CursorLocation = adUseClient
+    Adodc1.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Karen\Desktop\Papeleria\Proyecto\Base_de_Datos.mdb;Persist Security Info=False"
+    'Conectar el adodc1 con la tabla
+    Adodc1.RecordSource = "Select *from Productos"
+    'Adodc1.Refresh 'Actualizar los datos del adodc1
+    Set DataGrid1.DataSource = RsProductos
 End Sub
 
 Private Sub R_Click()
@@ -196,4 +230,45 @@ End Sub
 Private Sub RM_Click()
     Form5.Show
     Me.Hide
+End Sub
+
+Private Sub txtBuscar_Change()
+    Buscar = txtBuscar.Text & "%"
+    If Combo1.Text = "Código" Then BuscarCodigo
+    If Combo1.Text = "Nombre" Then BuscarNombre
+    If Combo1.Text = "Color" Then BuscarColor
+    If Combo1.Text = "Id_Producto" Then BuscarId_Producto
+    Set DataGrid1.DataSource = RsProductos
+End Sub
+
+Sub BuscarCodigo()
+    If RsProductos.State = 1 Then RsProductos.Close
+    RsProductos.CursorType = adOpenKeyset 'Definimos el tipo de cursor.
+    RsProductos.LockType = adLockOptimistic 'Definimos el tipo de bloqueo.
+            
+    RsProductos.Open "Select * from Productos Where Código like '%" & Buscar & "'", Base
+End Sub
+
+Sub BuscarNombre()
+    If RsProductos.State = 1 Then RsProductos.Close
+    RsProductos.CursorType = adOpenKeyset 'Definimos el tipo de cursor.
+    RsProductos.LockType = adLockOptimistic 'Definimos el tipo de bloqueo.
+            
+    RsProductos.Open "Select * from Productos Where Nombre like '%" & Buscar & "'", Base
+End Sub
+
+Sub BuscarColor()
+    If RsProductos.State = 1 Then RsProductos.Close
+    RsProductos.CursorType = adOpenKeyset 'Definimos el tipo de cursor.
+    RsProductos.LockType = adLockOptimistic 'Definimos el tipo de bloqueo.
+            
+    RsProductos.Open "Select * from Productos Where Color like '%" & Buscar & "'", Base
+End Sub
+
+Sub BuscarId_Producto()
+    If RsProductos.State = 1 Then RsProductos.Close
+    RsProductos.CursorType = adOpenKeyset 'Definimos el tipo de cursor.
+    RsProductos.LockType = adLockOptimistic 'Definimos el tipo de bloqueo.
+            
+    RsProductos.Open "Select * from Productos Where Id_producto like '%" & Buscar & "'", Base
 End Sub
