@@ -14,7 +14,7 @@ Sub main()
         'Conexion a la base de datos
         '.Open "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Usuario\Desktop\Proyectopap\Proyecto\Base_de_Datos.mdb;Persist Security Info=False"
         .Open " Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\PAZ\Desktop\repositorio\Proyecto\Base_de_Datos.mdb;Persist Security Info=False "
-        'no borrar porfa.Open " Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Karen\Desktop\Papeleria\Proyecto\Base_de_Datos.mdb;Persist Security Info=False"
+        '.Open " Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Karen\Desktop\Papeleria\Proyecto\Base_de_Datos.mdb;Persist Security Info=False"
         Form1.Show
     End With
 End Sub

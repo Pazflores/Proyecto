@@ -86,7 +86,7 @@ Begin VB.Form Form4
             HaveTrueFalseNull=   0
             FirstDayOfWeek  =   0
             FirstWeekOfYear =   0
-            LCID            =   12298
+            LCID            =   22538
             SubFormatType   =   0
          EndProperty
       EndProperty
@@ -99,7 +99,7 @@ Begin VB.Form Form4
             HaveTrueFalseNull=   0
             FirstDayOfWeek  =   0
             FirstWeekOfYear =   0
-            LCID            =   12298
+            LCID            =   22538
             SubFormatType   =   0
          EndProperty
       EndProperty
@@ -203,10 +203,13 @@ Private Sub Form_Load()
     Adodc1.Visible = False
     FormatoDataGrid
     
-    main
+    'main
     Productos
     Adodc1.CursorLocation = adUseClient
-    Adodc1.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Karen\Desktop\Papeleria\Proyecto\Base_de_Datos.mdb;Persist Security Info=False"
+    
+    'Adodc1.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Karen\Desktop\Papeleria\Proyecto\Base_de_Datos.mdb;Persist Security Info=False"
+    Adodc1.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\PAZ\Desktop\repositorio\Proyecto\Base_de_Datos.mdb;Persist Security Info=False"
+    
     'Conectar el adodc1 con la tabla
     Adodc1.RecordSource = "Select *from Productos"
     'Adodc1.Refresh 'Actualizar los datos del adodc1
