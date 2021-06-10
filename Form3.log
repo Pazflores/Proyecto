@@ -1,6 +1,6 @@
-Línea 66: la clase MSFlexGridLib.MSFlexGrid del control Lista no era una clase de control cargada.
-Línea 72: el nombre de la propiedad _ExtentX de Lista no es válido.
-Línea 73: el nombre de la propiedad _ExtentY de Lista no es válido.
-Línea 74: el nombre de la propiedad _Version de Lista no es válido.
-Línea 75: el nombre de la propiedad Rows de Lista no es válido.
-Línea 76: el nombre de la propiedad Cols de Lista no es válido.
+Línea 69: la propiedad ItemData de Combo1 tenía una referencia a archivo no válida.
+Línea 71: la propiedad List de Combo1 tenía una referencia a archivo no válida.
+Línea 147: la propiedad Connect de Adodc2 tenía un valor no válido.
+Línea 148: la propiedad OLEDBString de Adodc2 tenía un valor no válido.
+Línea 193: la propiedad Connect de Adodc1 tenía un valor no válido.
+Línea 194: la propiedad OLEDBString de Adodc1 tenía un valor no válido.
