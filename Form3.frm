@@ -866,8 +866,8 @@ Else
     
     If RsProductos.EOF = False And RsProductos.BOF = False Then
         Text2.Text = RsProductos.Fields(1).Value
-        Text13.Text = RsProductos.Fields(2).Value
-        Text3.Text = RsProductos.Fields(3).Value
+        Text3.Text = RsProductos.Fields(2).Value
+        Text13.Text = RsProductos.Fields(0).Value
         Text10.Text = ""
         Text10.SetFocus
     Else
@@ -964,6 +964,7 @@ If KeyAscii = 13 Then
     Text2.Text = ""
     Text3.Text = ""
     Text1.Text = ""
+    Text13.Text = ""
     Text2.SetFocus
     Text6 = tot * 0.12
     Text7.Text = tot + Val(Text6.Text)
