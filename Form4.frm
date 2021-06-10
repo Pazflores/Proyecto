@@ -138,7 +138,7 @@ Begin VB.Form Form4
       Orientation     =   0
       Enabled         =   -1
       Connect         =   $"Form4.frx":004D
-      OLEDBString     =   $"Form4.frx":00D9
+      OLEDBString     =   $"Form4.frx":00D6
       OLEDBFile       =   ""
       DataSourceName  =   ""
       OtherAttributes =   ""

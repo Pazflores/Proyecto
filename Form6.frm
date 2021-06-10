@@ -81,7 +81,7 @@ Begin VB.Form Form6
       Orientation     =   0
       Enabled         =   -1
       Connect         =   $"Form6.frx":0000
-      OLEDBString     =   $"Form6.frx":008C
+      OLEDBString     =   $"Form6.frx":0089
       OLEDBFile       =   ""
       DataSourceName  =   ""
       OtherAttributes =   ""
@@ -268,7 +268,7 @@ Begin VB.Form Form6
    Begin VB.Image Image2 
       Height          =   840
       Left            =   10080
-      Picture         =   "Form6.frx":0118
+      Picture         =   "Form6.frx":0112
       Stretch         =   -1  'True
       Top             =   7200
       Width           =   960
@@ -276,7 +276,7 @@ Begin VB.Form Form6
    Begin VB.Image Image3 
       Height          =   840
       Left            =   2160
-      Picture         =   "Form6.frx":2FE2
+      Picture         =   "Form6.frx":2FDC
       Stretch         =   -1  'True
       Top             =   7200
       Width           =   960
@@ -284,7 +284,7 @@ Begin VB.Form Form6
    Begin VB.Image Image1 
       Height          =   1800
       Left            =   1320
-      Picture         =   "Form6.frx":64CD
+      Picture         =   "Form6.frx":64C7
       Stretch         =   -1  'True
       Top             =   240
       Width           =   1800
