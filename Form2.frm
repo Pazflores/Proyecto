@@ -3,14 +3,15 @@ Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Begin VB.Form Form2 
    BackColor       =   &H00FFFFFF&
    Caption         =   "Registro de Clientes "
-   ClientHeight    =   8025
+   ClientHeight    =   8490
    ClientLeft      =   120
    ClientTop       =   465
-   ClientWidth     =   14310
+   ClientWidth     =   15525
    LinkTopic       =   "Form2"
-   ScaleHeight     =   8025
-   ScaleWidth      =   14310
-   StartUpPosition =   1  'CenterOwner
+   Picture         =   "Form2.frx":0000
+   ScaleHeight     =   8490
+   ScaleWidth      =   15525
+   StartUpPosition =   2  'CenterScreen
    Begin VB.CommandButton cmdbuscar 
       Caption         =   "Buscar"
       BeginProperty Font 
@@ -23,9 +24,9 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   11880
+      Left            =   11760
       TabIndex        =   19
-      Top             =   4440
+      Top             =   6000
       Width           =   1815
    End
    Begin VB.CommandButton R 
@@ -40,9 +41,9 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   615
-      Left            =   11640
+      Left            =   12600
       TabIndex        =   18
-      Top             =   7080
+      Top             =   1080
       Width           =   1815
    End
    Begin VB.TextBox txtapellido 
@@ -58,15 +59,15 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   8640
+      Left            =   9240
       TabIndex        =   16
-      Top             =   2640
+      Top             =   3960
       Width           =   2895
    End
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   495
-      Left            =   11040
-      Top             =   480
+      Left            =   12360
+      Top             =   240
       Visible         =   0   'False
       Width           =   1815
       _ExtentX        =   3201
@@ -90,8 +91,8 @@ Begin VB.Form Form2
       ForeColor       =   -2147483640
       Orientation     =   0
       Enabled         =   -1
-      Connect         =   $"Form2.frx":0000
-      OLEDBString     =   $"Form2.frx":0089
+      Connect         =   $"Form2.frx":8672
+      OLEDBString     =   $"Form2.frx":86FB
       OLEDBFile       =   ""
       DataSourceName  =   ""
       OtherAttributes =   ""
@@ -123,9 +124,9 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   8640
+      Left            =   9240
       TabIndex        =   14
-      Top             =   3600
+      Top             =   5160
       Width           =   2895
    End
    Begin VB.TextBox txtdireccion 
@@ -141,9 +142,9 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   3120
+      Left            =   3240
       TabIndex        =   9
-      Top             =   3600
+      Top             =   5160
       Width           =   3015
    End
    Begin VB.TextBox txtcorreo 
@@ -159,9 +160,9 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   3120
+      Left            =   3240
       TabIndex        =   8
-      Top             =   2640
+      Top             =   3960
       Width           =   3015
    End
    Begin VB.TextBox txtnombre 
@@ -177,9 +178,9 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   8640
+      Left            =   9240
       TabIndex        =   7
-      Top             =   1680
+      Top             =   2760
       Width           =   2895
    End
    Begin VB.TextBox txtcedula 
@@ -195,9 +196,9 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   3120
+      Left            =   3240
       TabIndex        =   6
-      Top             =   1680
+      Top             =   2760
       Width           =   3015
    End
    Begin VB.CommandButton cmdanterior 
@@ -212,9 +213,9 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   3480
+      Left            =   4680
       TabIndex        =   5
-      Top             =   6480
+      Top             =   7320
       Width           =   1815
    End
    Begin VB.CommandButton cmdsiguiente 
@@ -229,9 +230,9 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   7920
+      Left            =   9120
       TabIndex        =   4
-      Top             =   6480
+      Top             =   7320
       Width           =   1815
    End
    Begin VB.CommandButton cmdeliminar 
@@ -246,9 +247,9 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   10080
+      Left            =   8640
       TabIndex        =   3
-      Top             =   5160
+      Top             =   6000
       Width           =   1815
    End
    Begin VB.CommandButton cmdguardar 
@@ -263,9 +264,9 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   5640
+      Left            =   5160
       TabIndex        =   2
-      Top             =   5040
+      Top             =   6000
       Width           =   1815
    End
    Begin VB.CommandButton cmdnuevo 
@@ -280,38 +281,15 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   1200
+      Left            =   1800
       TabIndex        =   1
-      Top             =   5040
+      Top             =   6000
       Width           =   1815
-   End
-   Begin VB.Image Image3 
-      Height          =   840
-      Left            =   1920
-      Picture         =   "Form2.frx":0112
-      Stretch         =   -1  'True
-      Top             =   6240
-      Width           =   960
-   End
-   Begin VB.Image Image2 
-      Height          =   840
-      Left            =   10080
-      Picture         =   "Form2.frx":35FD
-      Stretch         =   -1  'True
-      Top             =   6240
-      Width           =   960
-   End
-   Begin VB.Image Image1 
-      Height          =   1440
-      Left            =   1080
-      Picture         =   "Form2.frx":64C7
-      Stretch         =   -1  'True
-      Top             =   0
-      Width           =   1560
    End
    Begin VB.Label Label7 
       BackColor       =   &H00FFFFFF&
-      Caption         =   "Apellido"
+      BackStyle       =   0  'Transparent
+      Caption         =   "Apellido:"
       BeginProperty Font 
          Name            =   "Baskerville Old Face"
          Size            =   15.75
@@ -322,14 +300,15 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   6720
+      Left            =   9240
       TabIndex        =   17
-      Top             =   2640
+      Top             =   3480
       Width           =   1455
    End
    Begin VB.Label Label6 
       BackColor       =   &H00FFFFFF&
-      Caption         =   "Teléfono"
+      BackStyle       =   0  'Transparent
+      Caption         =   "Teléfono:"
       BeginProperty Font 
          Name            =   "Baskerville Old Face"
          Size            =   15.75
@@ -340,14 +319,15 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   6720
+      Left            =   9240
       TabIndex        =   15
-      Top             =   3720
+      Top             =   4680
       Width           =   1455
    End
    Begin VB.Label Label5 
       BackColor       =   &H00FFFFFF&
-      Caption         =   "Dirección "
+      BackStyle       =   0  'Transparent
+      Caption         =   "Dirección :"
       BeginProperty Font 
          Name            =   "Baskerville Old Face"
          Size            =   15.75
@@ -358,14 +338,15 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   1080
+      Left            =   3240
       TabIndex        =   13
-      Top             =   3720
+      Top             =   4680
       Width           =   1455
    End
    Begin VB.Label Label1 
       BackColor       =   &H00FFFFFF&
-      Caption         =   "Correo"
+      BackStyle       =   0  'Transparent
+      Caption         =   "Correo:"
       BeginProperty Font 
          Name            =   "Baskerville Old Face"
          Size            =   15.75
@@ -376,14 +357,15 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   1080
+      Left            =   3240
       TabIndex        =   12
-      Top             =   2640
+      Top             =   3480
       Width           =   1455
    End
    Begin VB.Label Label3 
       BackColor       =   &H00FFFFFF&
-      Caption         =   "Cédula"
+      BackStyle       =   0  'Transparent
+      Caption         =   "Cédula:"
       BeginProperty Font 
          Name            =   "Baskerville Old Face"
          Size            =   15.75
@@ -394,14 +376,15 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   1080
+      Left            =   3240
       TabIndex        =   11
-      Top             =   1680
+      Top             =   2280
       Width           =   1455
    End
    Begin VB.Label Label2 
       BackColor       =   &H00FFFFFF&
-      Caption         =   "Nombre"
+      BackStyle       =   0  'Transparent
+      Caption         =   "Nombre:"
       BeginProperty Font 
          Name            =   "Baskerville Old Face"
          Size            =   15.75
@@ -412,9 +395,9 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   375
-      Left            =   6720
+      Left            =   9240
       TabIndex        =   10
-      Top             =   1680
+      Top             =   2280
       Width           =   1455
    End
    Begin VB.Label Label4 
@@ -431,9 +414,9 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   975
-      Left            =   3720
+      Left            =   4920
       TabIndex        =   0
-      Top             =   240
+      Top             =   1200
       Width           =   6255
    End
 End
@@ -510,6 +493,7 @@ If Adodc1.Recordset.BOF Then
 Adodc1.Recordset.MovePrevious
 End If
 End Sub
+
 
 
 Private Sub R_Click()

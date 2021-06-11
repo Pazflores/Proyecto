@@ -3,13 +3,15 @@ Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Begin VB.Form Form6 
    BackColor       =   &H00FFFFFF&
    Caption         =   "Registro de ProductosRegistro de Productos"
-   ClientHeight    =   9225
+   ClientHeight    =   8355
    ClientLeft      =   3285
    ClientTop       =   1200
-   ClientWidth     =   13635
+   ClientWidth     =   15585
    LinkTopic       =   "Form6"
-   ScaleHeight     =   9225
-   ScaleWidth      =   13635
+   Picture         =   "Form6.frx":0000
+   ScaleHeight     =   8355
+   ScaleWidth      =   15585
+   StartUpPosition =   2  'CenterScreen
    Begin VB.CommandButton cmdbuscar 
       Caption         =   "Buscar"
       BeginProperty Font 
@@ -22,9 +24,9 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   5760
+      Left            =   12000
       TabIndex        =   20
-      Top             =   8400
+      Top             =   6000
       Width           =   1815
    End
    Begin VB.CommandButton cmdInventario 
@@ -39,24 +41,24 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   615
-      Left            =   9600
+      Left            =   10560
       TabIndex        =   19
-      Top             =   8400
+      Top             =   7200
       Width           =   1815
    End
    Begin VB.TextBox txtId_Producto 
       DataField       =   "Id_producto"
       DataSource      =   "Adodc1"
       Height          =   495
-      Left            =   9600
+      Left            =   9480
       TabIndex        =   17
-      Top             =   4920
-      Width           =   2655
+      Top             =   4800
+      Width           =   3255
    End
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   330
-      Left            =   11280
-      Top             =   600
+      Left            =   12000
+      Top             =   360
       Visible         =   0   'False
       Width           =   1695
       _ExtentX        =   2990
@@ -80,8 +82,8 @@ Begin VB.Form Form6
       ForeColor       =   -2147483640
       Orientation     =   0
       Enabled         =   -1
-      Connect         =   $"Form6.frx":0000
-      OLEDBString     =   $"Form6.frx":0089
+      Connect         =   $"Form6.frx":8384
+      OLEDBString     =   $"Form6.frx":840D
       OLEDBFile       =   ""
       DataSourceName  =   ""
       OtherAttributes =   ""
@@ -112,7 +114,7 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   1080
+      Left            =   1920
       TabIndex        =   16
       Top             =   6000
       Width           =   1815
@@ -129,7 +131,7 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   5520
+      Left            =   5160
       TabIndex        =   15
       Top             =   6000
       Width           =   1815
@@ -146,9 +148,9 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   9960
+      Left            =   8640
       TabIndex        =   14
-      Top             =   6120
+      Top             =   6000
       Width           =   1815
    End
    Begin VB.CommandButton cmdsiguiente 
@@ -163,9 +165,9 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   7800
+      Left            =   7200
       TabIndex        =   13
-      Top             =   7440
+      Top             =   7320
       Width           =   1815
    End
    Begin VB.CommandButton cmdanterior 
@@ -180,9 +182,9 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   3360
+      Left            =   3600
       TabIndex        =   12
-      Top             =   7440
+      Top             =   7320
       Width           =   1815
    End
    Begin VB.TextBox txtcolor 
@@ -191,25 +193,25 @@ Begin VB.Form Form6
       Height          =   495
       Left            =   2640
       TabIndex        =   11
-      Top             =   5040
+      Top             =   4920
       Width           =   3855
    End
    Begin VB.TextBox txtstock 
       DataField       =   "Stock"
       DataSource      =   "Adodc1"
       Height          =   495
-      Left            =   9600
+      Left            =   9480
       TabIndex        =   9
-      Top             =   3960
-      Width           =   2655
+      Top             =   3720
+      Width           =   3255
    End
    Begin VB.TextBox txtnombre 
       DataField       =   "Nombre"
       DataSource      =   "Adodc1"
       Height          =   495
-      Left            =   2760
+      Left            =   2640
       TabIndex        =   8
-      Top             =   3960
+      Top             =   3840
       Width           =   3735
    End
    Begin VB.TextBox txtprecio 
@@ -219,15 +221,15 @@ Begin VB.Form Form6
       Left            =   9480
       TabIndex        =   7
       Top             =   2520
-      Width           =   2655
+      Width           =   3255
    End
    Begin VB.TextBox txtcodigo 
       DataField       =   "Código"
       DataSource      =   "Adodc1"
       Height          =   495
-      Left            =   2760
+      Left            =   2640
       TabIndex        =   6
-      Top             =   2640
+      Top             =   2520
       Width           =   3735
    End
    Begin VB.CommandButton R 
@@ -242,13 +244,14 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   615
-      Left            =   11520
+      Left            =   12840
       TabIndex        =   1
-      Top             =   8400
+      Top             =   960
       Width           =   1815
    End
    Begin VB.Label Label7 
       BackColor       =   &H00FFFFFF&
+      BackStyle       =   0  'Transparent
       Caption         =   "Id_producto"
       BeginProperty Font 
          Name            =   "Baskerville Old Face"
@@ -260,37 +263,14 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   7200
+      Left            =   9480
       TabIndex        =   18
-      Top             =   4920
+      Top             =   4320
       Width           =   1695
-   End
-   Begin VB.Image Image2 
-      Height          =   840
-      Left            =   10080
-      Picture         =   "Form6.frx":0112
-      Stretch         =   -1  'True
-      Top             =   7200
-      Width           =   960
-   End
-   Begin VB.Image Image3 
-      Height          =   840
-      Left            =   2160
-      Picture         =   "Form6.frx":2FDC
-      Stretch         =   -1  'True
-      Top             =   7200
-      Width           =   960
-   End
-   Begin VB.Image Image1 
-      Height          =   1800
-      Left            =   1320
-      Picture         =   "Form6.frx":64C7
-      Stretch         =   -1  'True
-      Top             =   240
-      Width           =   1800
    End
    Begin VB.Label Label6 
       BackColor       =   &H00FFFFFF&
+      BackStyle       =   0  'Transparent
       Caption         =   "Color"
       BeginProperty Font 
          Name            =   "Baskerville Old Face"
@@ -302,13 +282,14 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   600
+      Left            =   2640
       TabIndex        =   10
-      Top             =   5040
+      Top             =   4440
       Width           =   1695
    End
    Begin VB.Label Label5 
       BackColor       =   &H00FFFFFF&
+      BackStyle       =   0  'Transparent
       Caption         =   "Nombre"
       BeginProperty Font 
          Name            =   "Baskerville Old Face"
@@ -320,13 +301,14 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   600
+      Left            =   2640
       TabIndex        =   5
-      Top             =   3960
+      Top             =   3240
       Width           =   1695
    End
    Begin VB.Label Label3 
       BackColor       =   &H00FFFFFF&
+      BackStyle       =   0  'Transparent
       Caption         =   "Precio"
       BeginProperty Font 
          Name            =   "Baskerville Old Face"
@@ -338,13 +320,14 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   7200
+      Left            =   9480
       TabIndex        =   4
-      Top             =   2640
+      Top             =   2040
       Width           =   1695
    End
    Begin VB.Label Label2 
       BackColor       =   &H00FFFFFF&
+      BackStyle       =   0  'Transparent
       Caption         =   "Stock"
       BeginProperty Font 
          Name            =   "Baskerville Old Face"
@@ -356,13 +339,14 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   7200
+      Left            =   9480
       TabIndex        =   3
-      Top             =   3960
+      Top             =   3240
       Width           =   1695
    End
    Begin VB.Label Label1 
       BackColor       =   &H00FFFFFF&
+      BackStyle       =   0  'Transparent
       Caption         =   "Código"
       BeginProperty Font 
          Name            =   "Baskerville Old Face"
@@ -374,9 +358,9 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   600
+      Left            =   2760
       TabIndex        =   2
-      Top             =   2640
+      Top             =   2040
       Width           =   1695
    End
    Begin VB.Label Label4 
@@ -393,9 +377,9 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   855
-      Left            =   3720
+      Left            =   4320
       TabIndex        =   0
-      Top             =   480
+      Top             =   1080
       Width           =   7095
    End
 End

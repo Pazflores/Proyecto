@@ -5,27 +5,29 @@ Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
 Begin VB.Form Form4 
    BackColor       =   &H00FFFFFF&
    Caption         =   "Inventario"
-   ClientHeight    =   6585
+   ClientHeight    =   8430
    ClientLeft      =   4995
    ClientTop       =   2670
-   ClientWidth     =   10590
+   ClientWidth     =   15735
    LinkTopic       =   "Form4"
-   ScaleHeight     =   6585
-   ScaleWidth      =   10590
+   Picture         =   "Form4.frx":0000
+   ScaleHeight     =   8430
+   ScaleWidth      =   15735
+   StartUpPosition =   2  'CenterScreen
    Begin VB.TextBox txtBuscar 
       Height          =   405
-      Left            =   4320
+      Left            =   7560
       TabIndex        =   5
-      Top             =   1200
+      Top             =   2880
       Width           =   3375
    End
    Begin VB.ComboBox Combo1 
       Height          =   315
-      ItemData        =   "Form4.frx":0000
-      Left            =   1920
-      List            =   "Form4.frx":0010
+      ItemData        =   "Form4.frx":CE8B
+      Left            =   4800
+      List            =   "Form4.frx":CE9B
       TabIndex        =   4
-      Top             =   1200
+      Top             =   3000
       Width           =   2055
    End
    Begin VB.CommandButton RM 
@@ -40,17 +42,17 @@ Begin VB.Form Form4
          Strikethrough   =   0   'False
       EndProperty
       Height          =   735
-      Left            =   7800
+      Left            =   12480
       TabIndex        =   2
-      Top             =   4920
+      Top             =   1080
       Width           =   2175
    End
    Begin MSDataGridLib.DataGrid DataGrid1 
-      Bindings        =   "Form4.frx":0038
+      Bindings        =   "Form4.frx":CEC3
       Height          =   2535
-      Left            =   600
+      Left            =   3120
       TabIndex        =   1
-      Top             =   1920
+      Top             =   4200
       Width           =   9375
       _ExtentX        =   16536
       _ExtentY        =   4471
@@ -86,7 +88,7 @@ Begin VB.Form Form4
             HaveTrueFalseNull=   0
             FirstDayOfWeek  =   0
             FirstWeekOfYear =   0
-            LCID            =   22538
+            LCID            =   12298
             SubFormatType   =   0
          EndProperty
       EndProperty
@@ -99,7 +101,7 @@ Begin VB.Form Form4
             HaveTrueFalseNull=   0
             FirstDayOfWeek  =   0
             FirstWeekOfYear =   0
-            LCID            =   22538
+            LCID            =   12298
             SubFormatType   =   0
          EndProperty
       EndProperty
@@ -113,8 +115,8 @@ Begin VB.Form Form4
    End
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   375
-      Left            =   600
-      Top             =   5040
+      Left            =   12840
+      Top             =   360
       Width           =   1815
       _ExtentX        =   3201
       _ExtentY        =   661
@@ -137,8 +139,8 @@ Begin VB.Form Form4
       ForeColor       =   -2147483640
       Orientation     =   0
       Enabled         =   -1
-      Connect         =   $"Form4.frx":004D
-      OLEDBString     =   $"Form4.frx":00D6
+      Connect         =   $"Form4.frx":CED8
+      OLEDBString     =   $"Form4.frx":CF61
       OLEDBFile       =   ""
       DataSourceName  =   ""
       OtherAttributes =   ""
@@ -158,7 +160,7 @@ Begin VB.Form Form4
       _Version        =   393216
    End
    Begin MSComDlg.CommonDialog CommonDialog1 
-      Left            =   9480
+      Left            =   11400
       Top             =   360
       _ExtentX        =   847
       _ExtentY        =   847
@@ -167,10 +169,19 @@ Begin VB.Form Form4
    Begin VB.Label Label2 
       BackStyle       =   0  'Transparent
       Caption         =   "Buscar por: "
-      Height          =   255
-      Left            =   600
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   15.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   495
+      Left            =   3000
       TabIndex        =   3
-      Top             =   1200
+      Top             =   3000
       Width           =   1575
    End
    Begin VB.Label Label1 
@@ -178,18 +189,18 @@ Begin VB.Form Form4
       Caption         =   "Inventario"
       BeginProperty Font 
          Name            =   "Baskerville Old Face"
-         Size            =   23.25
+         Size            =   36
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   615
-      Left            =   3960
+      Height          =   855
+      Left            =   6240
       TabIndex        =   0
-      Top             =   240
-      Width           =   2175
+      Top             =   1200
+      Width           =   3255
    End
 End
 Attribute VB_Name = "Form4"

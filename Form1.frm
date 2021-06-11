@@ -2,14 +2,15 @@ VERSION 5.00
 Begin VB.Form Form1 
    BackColor       =   &H00FFFFFF&
    Caption         =   "Loguin"
-   ClientHeight    =   6810
+   ClientHeight    =   8235
    ClientLeft      =   120
    ClientTop       =   465
-   ClientWidth     =   11655
+   ClientWidth     =   14715
    LinkTopic       =   "Form1"
-   ScaleHeight     =   6810
-   ScaleWidth      =   11655
-   StartUpPosition =   1  'CenterOwner
+   Picture         =   "Form1.frx":0000
+   ScaleHeight     =   8235
+   ScaleWidth      =   14715
+   StartUpPosition =   2  'CenterScreen
    Begin VB.CommandButton cmdingresar 
       Caption         =   "INGRESAR"
       BeginProperty Font 
@@ -22,10 +23,10 @@ Begin VB.Form Form1
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   2520
+      Left            =   4080
       MaskColor       =   &H8000000F&
-      TabIndex        =   6
-      Top             =   5520
+      TabIndex        =   5
+      Top             =   7200
       Width           =   1695
    End
    Begin VB.CommandButton Command1 
@@ -40,10 +41,10 @@ Begin VB.Form Form1
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   6960
+      Left            =   9120
       MaskColor       =   &H8000000F&
-      TabIndex        =   5
-      Top             =   5520
+      TabIndex        =   4
+      Top             =   7200
       Width           =   1695
    End
    Begin VB.TextBox txtusuario 
@@ -58,9 +59,9 @@ Begin VB.Form Form1
       EndProperty
       Height          =   405
       IMEMode         =   3  'DISABLE
-      Left            =   5880
-      TabIndex        =   4
-      Top             =   2280
+      Left            =   5760
+      TabIndex        =   3
+      Top             =   4320
       Width           =   4455
    End
    Begin VB.TextBox txtcontraseña 
@@ -75,30 +76,41 @@ Begin VB.Form Form1
       EndProperty
       Height          =   405
       IMEMode         =   3  'DISABLE
-      Left            =   5880
+      Left            =   5760
       PasswordChar    =   "*"
-      TabIndex        =   3
-      Top             =   4200
+      TabIndex        =   2
+      Top             =   5880
       Width           =   4455
    End
-   Begin VB.Image Image2 
-      Height          =   1680
+   Begin VB.Label Label1 
+      BackColor       =   &H00FFFFFF&
+      BackStyle       =   0  'Transparent
+      Caption         =   "PAPELERÍA VIRGEN DEL CISNE"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   36
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   1095
       Left            =   2040
-      Picture         =   "Form1.frx":0000
-      Stretch         =   -1  'True
-      Top             =   1560
-      Width           =   1800
+      TabIndex        =   6
+      Top             =   600
+      Width           =   11295
    End
-   Begin VB.Image Image1 
-      Height          =   1770
-      Left            =   2040
-      Picture         =   "Form1.frx":3F89
-      Stretch         =   -1  'True
-      Top             =   3480
-      Width           =   1740
+   Begin VB.Shape Shape1 
+      BackStyle       =   1  'Opaque
+      BorderColor     =   &H00FFFFFF&
+      Height          =   1335
+      Left            =   1560
+      Top             =   360
+      Width           =   11895
    End
    Begin VB.Label Label7 
-      BackColor       =   &H00FFFFFF&
+      BackStyle       =   0  'Transparent
       Caption         =   "Usuario:"
       BeginProperty Font 
          Name            =   "Baskerville Old Face"
@@ -110,13 +122,14 @@ Begin VB.Form Form1
          Strikethrough   =   0   'False
       EndProperty
       Height          =   375
-      Left            =   4200
-      TabIndex        =   2
-      Top             =   2280
+      Left            =   5760
+      TabIndex        =   1
+      Top             =   3720
       Width           =   1335
    End
    Begin VB.Label Label6 
       BackColor       =   &H00FFFFFF&
+      BackStyle       =   0  'Transparent
       Caption         =   "Contraseña:"
       BeginProperty Font 
          Name            =   "Baskerville Old Face"
@@ -128,29 +141,10 @@ Begin VB.Form Form1
          Strikethrough   =   0   'False
       EndProperty
       Height          =   375
-      Left            =   4200
-      TabIndex        =   1
-      Top             =   4200
-      Width           =   1575
-   End
-   Begin VB.Label Label1 
-      BackColor       =   &H00FFFFFF&
-      BackStyle       =   0  'Transparent
-      Caption         =   "BIENVENIDO "
-      BeginProperty Font 
-         Name            =   "Baskerville Old Face"
-         Size            =   48
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   1095
-      Left            =   2760
+      Left            =   5760
       TabIndex        =   0
-      Top             =   240
-      Width           =   6255
+      Top             =   5280
+      Width           =   1575
    End
 End
 Attribute VB_Name = "Form1"

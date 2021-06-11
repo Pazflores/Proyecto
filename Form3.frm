@@ -5,10 +5,10 @@ Begin VB.Form Form3
    BackColor       =   &H8000000E&
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Form3"
-   ClientHeight    =   10860
+   ClientHeight    =   9255
    ClientLeft      =   45
    ClientTop       =   390
-   ClientWidth     =   15585
+   ClientWidth     =   16905
    BeginProperty Font 
       Name            =   "Myanmar Text"
       Size            =   8.25
@@ -21,15 +21,16 @@ Begin VB.Form Form3
    LinkTopic       =   "Form3"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   ScaleHeight     =   10860
-   ScaleWidth      =   15585
+   Picture         =   "Form3.frx":0000
+   ScaleHeight     =   9255
+   ScaleWidth      =   16905
    StartUpPosition =   2  'CenterScreen
    Begin VB.ComboBox Combo2 
       Height          =   420
-      Left            =   360
+      Left            =   8400
       TabIndex        =   48
-      Top             =   600
-      Width           =   5415
+      Top             =   2280
+      Width           =   2175
    End
    Begin VB.TextBox Text14 
       BeginProperty Font 
@@ -42,10 +43,10 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   1920
+      Left            =   7800
       TabIndex        =   46
-      Top             =   1200
-      Width           =   3855
+      Top             =   2880
+      Width           =   2775
    End
    Begin VB.TextBox Text10 
       BeginProperty Font 
@@ -58,27 +59,37 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   9000
+      Left            =   1560
       TabIndex        =   45
-      Top             =   3720
-      Width           =   4095
+      Top             =   2400
+      Width           =   3135
    End
    Begin VB.CommandButton Command3 
       Caption         =   "Buscar Producto"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   14.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   420
-      Left            =   8880
+      Left            =   720
+      MaskColor       =   &H00FFFFFF&
       TabIndex        =   44
-      Top             =   6240
+      Top             =   5280
       Width           =   3615
    End
    Begin VB.ComboBox Combo1 
       Height          =   420
-      ItemData        =   "Form3.frx":0000
-      Left            =   7680
-      List            =   "Form3.frx":0002
+      ItemData        =   "Form3.frx":DC12
+      Left            =   2760
+      List            =   "Form3.frx":DC14
       TabIndex        =   43
-      Top             =   3120
-      Width           =   5415
+      Top             =   1800
+      Width           =   1935
    End
    Begin VB.TextBox Text13 
       BeginProperty Font 
@@ -91,29 +102,38 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   9120
+      Left            =   2280
       TabIndex        =   41
-      Top             =   4440
-      Width           =   3975
+      Top             =   3120
+      Width           =   2295
    End
    Begin VB.CommandButton Command5 
       Caption         =   "Buscar Cliente"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   14.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   420
-      Left            =   1200
+      Left            =   11640
       TabIndex        =   39
-      Top             =   6480
+      Top             =   4680
       Width           =   3255
    End
    Begin VB.Timer Timer1 
       Interval        =   1
-      Left            =   14880
-      Top             =   6840
+      Left            =   16440
+      Top             =   7320
    End
    Begin VB.CommandButton Command2 
       Caption         =   "Finalizar Compra"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Baskerville Old Face"
+         Size            =   14.25
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -121,15 +141,16 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   375
-      Left            =   2280
+      Left            =   960
+      MaskColor       =   &H00FFFFFF&
       TabIndex        =   36
-      Top             =   10200
+      Top             =   8280
       Width           =   2895
    End
    Begin MSAdodcLib.Adodc Adodc2 
       Height          =   375
-      Left            =   14280
-      Top             =   5760
+      Left            =   16440
+      Top             =   7440
       Visible         =   0   'False
       Width           =   1200
       _ExtentX        =   2117
@@ -153,8 +174,8 @@ Begin VB.Form Form3
       ForeColor       =   -2147483640
       Orientation     =   0
       Enabled         =   -1
-      Connect         =   $"Form3.frx":0004
-      OLEDBString     =   $"Form3.frx":008D
+      Connect         =   $"Form3.frx":DC16
+      OLEDBString     =   $"Form3.frx":DC9F
       OLEDBFile       =   ""
       DataSourceName  =   ""
       OtherAttributes =   ""
@@ -175,8 +196,8 @@ Begin VB.Form Form3
    End
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   375
-      Left            =   14280
-      Top             =   5160
+      Left            =   15960
+      Top             =   6480
       Visible         =   0   'False
       Width           =   1200
       _ExtentX        =   2117
@@ -200,8 +221,8 @@ Begin VB.Form Form3
       ForeColor       =   -2147483640
       Orientation     =   0
       Enabled         =   -1
-      Connect         =   $"Form3.frx":0116
-      OLEDBString     =   $"Form3.frx":019F
+      Connect         =   $"Form3.frx":DD28
+      OLEDBString     =   $"Form3.frx":DDB1
       OLEDBFile       =   ""
       DataSourceName  =   ""
       OtherAttributes =   ""
@@ -222,11 +243,21 @@ Begin VB.Form Form3
    End
    Begin VB.CommandButton Command1 
       Caption         =   "Regresar al Menú"
-      Height          =   855
-      Left            =   120
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   14.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   615
+      Left            =   1320
+      MaskColor       =   &H00FFFFFF&
       TabIndex        =   34
-      Top             =   9840
-      Width           =   1935
+      Top             =   6240
+      Width           =   2055
    End
    Begin VB.TextBox Text12 
       BeginProperty Font 
@@ -239,10 +270,10 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   1920
+      Left            =   12600
       TabIndex        =   31
-      Top             =   5640
-      Width           =   3855
+      Top             =   3600
+      Width           =   2895
    End
    Begin VB.TextBox Text11 
       BeginProperty Font 
@@ -255,18 +286,18 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   1920
+      Left            =   7800
       TabIndex        =   28
-      Top             =   1680
-      Width           =   3855
+      Top             =   3360
+      Width           =   2775
    End
    Begin MSFlexGridLib.MSFlexGrid Lista 
       Height          =   2535
-      Left            =   960
+      Left            =   4680
       TabIndex        =   27
-      Top             =   7080
-      Width           =   12255
-      _ExtentX        =   21616
+      Top             =   5280
+      Width           =   11655
+      _ExtentX        =   20558
       _ExtentY        =   4471
       _Version        =   393216
       Rows            =   20
@@ -283,10 +314,10 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   1920
+      Left            =   12600
       TabIndex        =   23
-      Top             =   4680
-      Width           =   3855
+      Top             =   2760
+      Width           =   2895
    End
    Begin VB.TextBox Text8 
       BeginProperty Font 
@@ -299,10 +330,10 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   1920
+      Left            =   12600
       TabIndex        =   20
-      Top             =   3720
-      Width           =   3855
+      Top             =   1800
+      Width           =   2895
    End
    Begin VB.TextBox Text7 
       BeginProperty Font 
@@ -315,9 +346,9 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   11040
+      Left            =   12000
       TabIndex        =   12
-      Top             =   10200
+      Top             =   8520
       Width           =   2175
    End
    Begin VB.TextBox Text6 
@@ -331,9 +362,9 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   8520
+      Left            =   8640
       TabIndex        =   11
-      Top             =   10200
+      Top             =   8520
       Width           =   2175
    End
    Begin VB.TextBox Text5 
@@ -347,16 +378,16 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   6000
+      Left            =   5640
       TabIndex        =   10
-      Top             =   10200
+      Top             =   8520
       Width           =   2175
    End
    Begin VB.CommandButton Command4 
       Caption         =   "Borrar ultima fila"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Baskerville Old Face"
+         Size            =   14.25
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -364,9 +395,10 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   375
-      Left            =   2280
+      Left            =   960
+      MaskColor       =   &H00FFFFFF&
       TabIndex        =   9
-      Top             =   9720
+      Top             =   7320
       Width           =   2895
    End
    Begin VB.TextBox Text4 
@@ -380,10 +412,10 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   1920
+      Left            =   7680
       TabIndex        =   8
-      Top             =   2640
-      Width           =   3855
+      Top             =   4320
+      Width           =   2895
    End
    Begin VB.TextBox Text3 
       BeginProperty Font 
@@ -396,10 +428,10 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   9120
+      Left            =   2280
       TabIndex        =   6
-      Top             =   5400
-      Width           =   3975
+      Top             =   4080
+      Width           =   2295
    End
    Begin VB.TextBox Text2 
       BeginProperty Font 
@@ -412,10 +444,10 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   9120
+      Left            =   2280
       TabIndex        =   4
-      Top             =   4920
-      Width           =   3975
+      Top             =   3600
+      Width           =   2295
    End
    Begin VB.TextBox Text1 
       BeginProperty Font 
@@ -428,45 +460,17 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   9120
+      Left            =   2280
       TabIndex        =   2
-      Top             =   5880
-      Width           =   3975
+      Top             =   4560
+      Width           =   2295
    End
    Begin VB.Label Label27 
-      Caption         =   "Buscar Dato"
-      Height          =   255
-      Left            =   360
-      TabIndex        =   47
-      Top             =   1200
-      Width           =   1215
-   End
-   Begin VB.Line Line3 
-      BorderWidth     =   3
-      X1              =   -480
-      X2              =   6720
-      Y1              =   1560
-      Y2              =   1560
-   End
-   Begin VB.Line Line2 
-      BorderWidth     =   5
-      X1              =   6720
-      X2              =   6720
-      Y1              =   0
-      Y2              =   6960
-   End
-   Begin VB.Line Line1 
-      BorderWidth     =   3
-      X1              =   6720
-      X2              =   14040
-      Y1              =   4200
-      Y2              =   4200
-   End
-   Begin VB.Label Label26 
-      Caption         =   "Codigo"
+      BackStyle       =   0  'Transparent
+      Caption         =   "Buscar Dato:"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Baskerville Old Face"
+         Size            =   12
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -474,18 +478,46 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   7680
+      Left            =   6360
+      TabIndex        =   47
+      Top             =   2880
+      Width           =   1335
+   End
+   Begin VB.Label Label26 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Codigo"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   600
       TabIndex        =   42
-      Top             =   4440
-      Width           =   1215
+      Top             =   3120
+      Width           =   975
    End
    Begin VB.Label Label25 
-      Caption         =   "Forma de busqueda"
+      BackStyle       =   0  'Transparent
+      Caption         =   "Forma de busqueda:"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   255
-      Left            =   7680
+      Left            =   480
       TabIndex        =   40
-      Top             =   2760
-      Width           =   5415
+      Top             =   1920
+      Width           =   2175
    End
    Begin VB.Label Label23 
       BackStyle       =   0  'Transparent
@@ -500,9 +532,9 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   375
-      Left            =   9120
+      Left            =   8760
       TabIndex        =   38
-      Top             =   1200
+      Top             =   1560
       Width           =   735
    End
    Begin VB.Label Label22 
@@ -517,16 +549,35 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   375
-      Left            =   9960
+      Left            =   9720
       TabIndex        =   37
-      Top             =   1200
+      Top             =   1560
       Width           =   1275
    End
    Begin VB.Label Label24 
-      Caption         =   "Buscar"
+      BackStyle       =   0  'Transparent
+      Caption         =   "Buscar:"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Baskerville Old Face"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   600
+      TabIndex        =   35
+      Top             =   2400
+      Width           =   975
+   End
+   Begin VB.Label Label21 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Dirección:"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   12
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -534,17 +585,9 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   7680
-      TabIndex        =   35
-      Top             =   3720
-      Width           =   1215
-   End
-   Begin VB.Label Label21 
-      Caption         =   "Dirección"
-      Height          =   255
-      Left            =   360
+      Left            =   11160
       TabIndex        =   33
-      Top             =   5640
+      Top             =   3600
       Width           =   1215
    End
    Begin VB.Label Label20 
@@ -558,17 +601,27 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   375
-      Left            =   360
+      Left            =   11160
       TabIndex        =   32
-      Top             =   6000
-      Width           =   5415
+      Top             =   4080
+      Width           =   4335
    End
    Begin VB.Label Label19 
-      Caption         =   "Cédula"
+      BackStyle       =   0  'Transparent
+      Caption         =   "Cédula:"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   255
-      Left            =   360
+      Left            =   6360
       TabIndex        =   30
-      Top             =   1680
+      Top             =   3360
       Width           =   1215
    End
    Begin VB.Label Label18 
@@ -582,10 +635,10 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   375
-      Left            =   360
+      Left            =   6360
       TabIndex        =   29
-      Top             =   2040
-      Width           =   5415
+      Top             =   3720
+      Width           =   4215
    End
    Begin VB.Label Label17 
       BackStyle       =   0  'Transparent
@@ -599,9 +652,9 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   375
-      Left            =   12240
+      Left            =   7200
       TabIndex        =   26
-      Top             =   1200
+      Top             =   1560
       Width           =   1395
    End
    Begin VB.Label Label16 
@@ -617,9 +670,9 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   375
-      Left            =   11400
+      Left            =   6360
       TabIndex        =   25
-      Top             =   1200
+      Top             =   1560
       Width           =   735
    End
    Begin VB.Label Label15 
@@ -633,17 +686,27 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   375
-      Left            =   360
+      Left            =   11160
       TabIndex        =   24
-      Top             =   5040
-      Width           =   5415
+      Top             =   3120
+      Width           =   4335
    End
    Begin VB.Label Label14 
-      Caption         =   "Correo"
+      BackStyle       =   0  'Transparent
+      Caption         =   "Correo:"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   255
-      Left            =   360
+      Left            =   11160
       TabIndex        =   22
-      Top             =   4680
+      Top             =   2760
       Width           =   1215
    End
    Begin VB.Label Label13 
@@ -657,17 +720,27 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   375
-      Left            =   360
+      Left            =   11160
       TabIndex        =   21
-      Top             =   4080
-      Width           =   5415
+      Top             =   2280
+      Width           =   4335
    End
    Begin VB.Label Label12 
-      Caption         =   "Celular"
+      BackStyle       =   0  'Transparent
+      Caption         =   "Celular:"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   255
-      Left            =   360
+      Left            =   11160
       TabIndex        =   19
-      Top             =   3720
+      Top             =   1800
       Width           =   1215
    End
    Begin VB.Label Label11 
@@ -681,32 +754,17 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   375
-      Left            =   360
+      Left            =   6360
       TabIndex        =   18
-      Top             =   3000
-      Width           =   5415
+      Top             =   4680
+      Width           =   4215
    End
    Begin VB.Label Label10 
-      Caption         =   "Datos Del Producto"
-      Height          =   255
-      Left            =   7680
-      TabIndex        =   17
-      Top             =   2280
-      Width           =   5415
-   End
-   Begin VB.Label Label9 
-      Caption         =   "Datos Del Cliente"
-      Height          =   255
-      Left            =   360
-      TabIndex        =   16
-      Top             =   120
-      Width           =   5415
-   End
-   Begin VB.Label Label8 
-      Caption         =   "Total"
+      BackStyle       =   0  'Transparent
+      Caption         =   "Datos Del Producto:"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Baskerville Old Face"
+         Size            =   12
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -714,16 +772,53 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   11040
+      Left            =   480
+      TabIndex        =   17
+      Top             =   1320
+      Width           =   2055
+   End
+   Begin VB.Label Label9 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Datos Del Cliente:"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   6360
+      TabIndex        =   16
+      Top             =   2400
+      Width           =   1935
+   End
+   Begin VB.Label Label8 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Total:"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   14.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   255
+      Left            =   12000
       TabIndex        =   15
-      Top             =   9960
+      Top             =   8040
       Width           =   2175
    End
    Begin VB.Label Label7 
-      Caption         =   "Iva"
+      BackStyle       =   0  'Transparent
+      Caption         =   "Iva:"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Baskerville Old Face"
+         Size            =   14.25
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -731,16 +826,17 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   8520
+      Left            =   8760
       TabIndex        =   14
-      Top             =   9960
+      Top             =   8040
       Width           =   2175
    End
    Begin VB.Label Label6 
-      Caption         =   "Subtotal"
+      BackStyle       =   0  'Transparent
+      Caption         =   "Subtotal:"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Baskerville Old Face"
+         Size            =   14.25
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -748,16 +844,17 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   6000
+      Left            =   5760
       TabIndex        =   13
-      Top             =   9960
+      Top             =   8040
       Width           =   2175
    End
    Begin VB.Label Label5 
-      Caption         =   "Nombre"
+      BackStyle       =   0  'Transparent
+      Caption         =   "Nombre:"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Baskerville Old Face"
+         Size            =   12
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -765,16 +862,17 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   360
+      Left            =   6360
       TabIndex        =   7
-      Top             =   2640
+      Top             =   4320
       Width           =   1215
    End
    Begin VB.Label Label4 
+      BackStyle       =   0  'Transparent
       Caption         =   "Precio "
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Baskerville Old Face"
+         Size            =   12
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -782,16 +880,17 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   7680
+      Left            =   600
       TabIndex        =   5
-      Top             =   5400
+      Top             =   4200
       Width           =   1215
    End
    Begin VB.Label Label3 
+      BackStyle       =   0  'Transparent
       Caption         =   "Producto"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Baskerville Old Face"
+         Size            =   12
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -799,16 +898,17 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   7680
+      Left            =   600
       TabIndex        =   3
-      Top             =   4920
-      Width           =   1215
+      Top             =   3600
+      Width           =   1095
    End
    Begin VB.Label Label2 
+      BackStyle       =   0  'Transparent
       Caption         =   "Cantidad"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Baskerville Old Face"
+         Size            =   12
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -816,17 +916,17 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   7680
+      Left            =   600
       TabIndex        =   1
-      Top             =   5880
+      Top             =   4680
       Width           =   1215
    End
    Begin VB.Label Label1 
       AutoSize        =   -1  'True
       BackStyle       =   0  'Transparent
-      Caption         =   "Virgen del Cisne"
+      Caption         =   "FACTURA"
       BeginProperty Font 
-         Name            =   "MV Boli"
+         Name            =   "Baskerville Old Face"
          Size            =   39
          Charset         =   0
          Weight          =   700
@@ -834,11 +934,11 @@ Begin VB.Form Form3
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   1020
-      Left            =   7440
+      Height          =   885
+      Left            =   6840
       TabIndex        =   0
-      Top             =   120
-      Width           =   5910
+      Top             =   360
+      Width           =   3765
    End
 End
 Attribute VB_Name = "Form3"
@@ -846,6 +946,8 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+
+
 Private Sub Command1_Click()
 Form5.Show
 Me.Hide
@@ -942,6 +1044,9 @@ Lista.Row = 0
 Lista.Text = "Total Unico"
 fila = 1
 End Sub
+
+
+
 
 Private Sub Text1_KeyPress(KeyAscii As Integer)
 If KeyAscii = 13 Then
