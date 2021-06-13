@@ -8,7 +8,7 @@ Begin VB.Form Form3
    ClientHeight    =   9255
    ClientLeft      =   45
    ClientTop       =   390
-   ClientWidth     =   16905
+   ClientWidth     =   18390
    BeginProperty Font 
       Name            =   "Myanmar Text"
       Size            =   8.25
@@ -23,8 +23,72 @@ Begin VB.Form Form3
    MinButton       =   0   'False
    Picture         =   "Form3.frx":0000
    ScaleHeight     =   9255
-   ScaleWidth      =   16905
+   ScaleWidth      =   18390
    StartUpPosition =   2  'CenterScreen
+   Begin VB.CommandButton Command6 
+      Caption         =   "Crear Factura"
+      BeginProperty Font 
+         Name            =   "Baskerville Old Face"
+         Size            =   14.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   960
+      MaskColor       =   &H00FFFFFF&
+      TabIndex        =   49
+      Top             =   8520
+      Width           =   2895
+   End
+   Begin MSAdodcLib.Adodc Adodc3 
+      Height          =   330
+      Left            =   16800
+      Top             =   6480
+      Width           =   1200
+      _ExtentX        =   2117
+      _ExtentY        =   582
+      ConnectMode     =   0
+      CursorLocation  =   3
+      IsolationLevel  =   -1
+      ConnectionTimeout=   15
+      CommandTimeout  =   30
+      CursorType      =   3
+      LockType        =   3
+      CommandType     =   2
+      CursorOptions   =   0
+      CacheSize       =   50
+      MaxRecords      =   0
+      BOFAction       =   0
+      EOFAction       =   0
+      ConnectStringType=   1
+      Appearance      =   1
+      BackColor       =   -2147483643
+      ForeColor       =   -2147483640
+      Orientation     =   0
+      Enabled         =   -1
+      Connect         =   $"Form3.frx":DC12
+      OLEDBString     =   $"Form3.frx":DC9E
+      OLEDBFile       =   ""
+      DataSourceName  =   ""
+      OtherAttributes =   ""
+      UserName        =   ""
+      Password        =   ""
+      RecordSource    =   "DetalleFactura"
+      Caption         =   "Adodc3"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Myanmar Text"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      _Version        =   393216
+   End
    Begin VB.ComboBox Combo2 
       Height          =   420
       Left            =   8400
@@ -84,9 +148,9 @@ Begin VB.Form Form3
    End
    Begin VB.ComboBox Combo1 
       Height          =   420
-      ItemData        =   "Form3.frx":DC12
+      ItemData        =   "Form3.frx":DD2A
       Left            =   2760
-      List            =   "Form3.frx":DC14
+      List            =   "Form3.frx":DD2C
       TabIndex        =   43
       Top             =   1800
       Width           =   1935
@@ -126,11 +190,11 @@ Begin VB.Form Form3
    End
    Begin VB.Timer Timer1 
       Interval        =   1
-      Left            =   16440
-      Top             =   7320
+      Left            =   17280
+      Top             =   7200
    End
    Begin VB.CommandButton Command2 
-      Caption         =   "Finalizar Compra"
+      Caption         =   "Agregar Información"
       BeginProperty Font 
          Name            =   "Baskerville Old Face"
          Size            =   14.25
@@ -144,13 +208,13 @@ Begin VB.Form Form3
       Left            =   960
       MaskColor       =   &H00FFFFFF&
       TabIndex        =   36
-      Top             =   8280
+      Top             =   7920
       Width           =   2895
    End
    Begin MSAdodcLib.Adodc Adodc2 
       Height          =   375
-      Left            =   16440
-      Top             =   7440
+      Left            =   16800
+      Top             =   5520
       Visible         =   0   'False
       Width           =   1200
       _ExtentX        =   2117
@@ -174,8 +238,8 @@ Begin VB.Form Form3
       ForeColor       =   -2147483640
       Orientation     =   0
       Enabled         =   -1
-      Connect         =   $"Form3.frx":DC16
-      OLEDBString     =   $"Form3.frx":DC9F
+      Connect         =   $"Form3.frx":DD2E
+      OLEDBString     =   $"Form3.frx":DDB7
       OLEDBFile       =   ""
       DataSourceName  =   ""
       OtherAttributes =   ""
@@ -196,8 +260,8 @@ Begin VB.Form Form3
    End
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   375
-      Left            =   15960
-      Top             =   6480
+      Left            =   16800
+      Top             =   4560
       Visible         =   0   'False
       Width           =   1200
       _ExtentX        =   2117
@@ -221,8 +285,8 @@ Begin VB.Form Form3
       ForeColor       =   -2147483640
       Orientation     =   0
       Enabled         =   -1
-      Connect         =   $"Form3.frx":DD28
-      OLEDBString     =   $"Form3.frx":DDB1
+      Connect         =   $"Form3.frx":DE40
+      OLEDBString     =   $"Form3.frx":DEC9
       OLEDBFile       =   ""
       DataSourceName  =   ""
       OtherAttributes =   ""
@@ -336,6 +400,8 @@ Begin VB.Form Form3
       Width           =   2895
    End
    Begin VB.TextBox Text7 
+      DataField       =   "Total"
+      DataSource      =   "Adodc3"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -352,6 +418,7 @@ Begin VB.Form Form3
       Width           =   2175
    End
    Begin VB.TextBox Text6 
+      DataSource      =   "Adodc3"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -368,6 +435,8 @@ Begin VB.Form Form3
       Width           =   2175
    End
    Begin VB.TextBox Text5 
+      DataField       =   "PrecioUnitario"
+      DataSource      =   "Adodc3"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -450,6 +519,8 @@ Begin VB.Form Form3
       Width           =   2295
    End
    Begin VB.TextBox Text1 
+      DataField       =   "Cantidad"
+      DataSource      =   "Adodc3"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -946,11 +1017,15 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-
-
 Private Sub Command1_Click()
 Form5.Show
 Me.Hide
+End Sub
+
+Private Sub Command2_Click()
+Adodc3.Recordset.AddNew
+Adodc3.Recordset.Update
+Adodc3.Refresh
 End Sub
 
 Private Sub Command3_Click()
@@ -1016,6 +1091,10 @@ Text4.Text = ""
 Text8.Text = ""
 Text9.Text = ""
 Text12.Text = ""
+End Sub
+
+Private Sub Command6_Click()
+DataReport1.Show
 End Sub
 
 Private Sub Form_Load()
@@ -1101,6 +1180,7 @@ If KeyAscii = 13 Then
     Text8.SetFocus
 End If
 End Sub
+
 Private Sub Text8_KeyPress(KeyAscii As Integer)
 If KeyAscii = 13 Then
     Label13.Caption = Text8.Text
