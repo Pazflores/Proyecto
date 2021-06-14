@@ -5,10 +5,10 @@ Begin VB.Form Form3
    BackColor       =   &H8000000E&
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Form3"
-   ClientHeight    =   9255
+   ClientHeight    =   9135
    ClientLeft      =   45
    ClientTop       =   390
-   ClientWidth     =   18390
+   ClientWidth     =   19005
    BeginProperty Font 
       Name            =   "Myanmar Text"
       Size            =   8.25
@@ -22,8 +22,8 @@ Begin VB.Form Form3
    MaxButton       =   0   'False
    MinButton       =   0   'False
    Picture         =   "Form3.frx":0000
-   ScaleHeight     =   9255
-   ScaleWidth      =   18390
+   ScaleHeight     =   9135
+   ScaleWidth      =   19005
    StartUpPosition =   2  'CenterScreen
    Begin VB.CommandButton Command6 
       Caption         =   "Crear Factura"
@@ -37,16 +37,17 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   375
-      Left            =   960
+      Left            =   840
       MaskColor       =   &H00FFFFFF&
-      TabIndex        =   49
-      Top             =   8520
-      Width           =   2895
+      TabIndex        =   48
+      Top             =   7320
+      Width           =   3015
    End
    Begin MSAdodcLib.Adodc Adodc3 
       Height          =   330
-      Left            =   16800
-      Top             =   6480
+      Left            =   17520
+      Top             =   6360
+      Visible         =   0   'False
       Width           =   1200
       _ExtentX        =   2117
       _ExtentY        =   582
@@ -70,7 +71,7 @@ Begin VB.Form Form3
       Orientation     =   0
       Enabled         =   -1
       Connect         =   $"Form3.frx":DC12
-      OLEDBString     =   $"Form3.frx":DC9B
+      OLEDBString     =   $"Form3.frx":DC9E
       OLEDBFile       =   ""
       DataSourceName  =   ""
       OtherAttributes =   ""
@@ -92,7 +93,7 @@ Begin VB.Form Form3
    Begin VB.ComboBox Combo2 
       Height          =   420
       Left            =   8400
-      TabIndex        =   48
+      TabIndex        =   47
       Top             =   2280
       Width           =   2175
    End
@@ -108,7 +109,7 @@ Begin VB.Form Form3
       EndProperty
       Height          =   285
       Left            =   7800
-      TabIndex        =   46
+      TabIndex        =   45
       Top             =   2880
       Width           =   2775
    End
@@ -124,7 +125,7 @@ Begin VB.Form Form3
       EndProperty
       Height          =   285
       Left            =   1560
-      TabIndex        =   45
+      TabIndex        =   44
       Top             =   2400
       Width           =   3135
    End
@@ -142,16 +143,16 @@ Begin VB.Form Form3
       Height          =   420
       Left            =   720
       MaskColor       =   &H00FFFFFF&
-      TabIndex        =   44
+      TabIndex        =   43
       Top             =   5280
       Width           =   3615
    End
    Begin VB.ComboBox Combo1 
       Height          =   420
-      ItemData        =   "Form3.frx":DD24
+      ItemData        =   "Form3.frx":DD2A
       Left            =   2760
-      List            =   "Form3.frx":DD26
-      TabIndex        =   43
+      List            =   "Form3.frx":DD2C
+      TabIndex        =   42
       Top             =   1800
       Width           =   1935
    End
@@ -167,7 +168,7 @@ Begin VB.Form Form3
       EndProperty
       Height          =   285
       Left            =   2280
-      TabIndex        =   41
+      TabIndex        =   40
       Top             =   3120
       Width           =   2295
    End
@@ -184,36 +185,18 @@ Begin VB.Form Form3
       EndProperty
       Height          =   420
       Left            =   11640
-      TabIndex        =   39
+      TabIndex        =   38
       Top             =   4680
       Width           =   3255
    End
    Begin VB.Timer Timer1 
       Interval        =   1
-      Left            =   17280
-      Top             =   7200
-   End
-   Begin VB.CommandButton Command2 
-      Caption         =   "Agregar Información"
-      BeginProperty Font 
-         Name            =   "Baskerville Old Face"
-         Size            =   14.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   375
-      Left            =   960
-      MaskColor       =   &H00FFFFFF&
-      TabIndex        =   36
-      Top             =   7920
-      Width           =   2895
+      Left            =   18000
+      Top             =   7080
    End
    Begin MSAdodcLib.Adodc Adodc2 
       Height          =   375
-      Left            =   16800
+      Left            =   17520
       Top             =   5520
       Visible         =   0   'False
       Width           =   1200
@@ -238,8 +221,8 @@ Begin VB.Form Form3
       ForeColor       =   -2147483640
       Orientation     =   0
       Enabled         =   -1
-      Connect         =   $"Form3.frx":DD28
-      OLEDBString     =   $"Form3.frx":DDB1
+      Connect         =   $"Form3.frx":DD2E
+      OLEDBString     =   $"Form3.frx":DDBA
       OLEDBFile       =   ""
       DataSourceName  =   ""
       OtherAttributes =   ""
@@ -260,8 +243,8 @@ Begin VB.Form Form3
    End
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   375
-      Left            =   16800
-      Top             =   4560
+      Left            =   17520
+      Top             =   4680
       Visible         =   0   'False
       Width           =   1200
       _ExtentX        =   2117
@@ -285,8 +268,8 @@ Begin VB.Form Form3
       ForeColor       =   -2147483640
       Orientation     =   0
       Enabled         =   -1
-      Connect         =   $"Form3.frx":DE3A
-      OLEDBString     =   $"Form3.frx":DEC3
+      Connect         =   $"Form3.frx":DE46
+      OLEDBString     =   $"Form3.frx":DED2
       OLEDBFile       =   ""
       DataSourceName  =   ""
       OtherAttributes =   ""
@@ -350,18 +333,18 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   285
-      Left            =   7800
+      Left            =   7680
       TabIndex        =   28
       Top             =   3360
-      Width           =   2775
+      Width           =   2895
    End
    Begin MSFlexGridLib.MSFlexGrid Lista 
       Height          =   2535
-      Left            =   4680
+      Left            =   4440
       TabIndex        =   27
       Top             =   5280
-      Width           =   11655
-      _ExtentX        =   20558
+      Width           =   12255
+      _ExtentX        =   21616
       _ExtentY        =   4471
       _Version        =   393216
       Rows            =   20
@@ -400,7 +383,6 @@ Begin VB.Form Form3
       Width           =   2895
    End
    Begin VB.TextBox Text7 
-      DataField       =   "Total"
       DataSource      =   "Adodc3"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
@@ -467,7 +449,7 @@ Begin VB.Form Form3
       Left            =   960
       MaskColor       =   &H00FFFFFF&
       TabIndex        =   9
-      Top             =   7320
+      Top             =   6720
       Width           =   2895
    End
    Begin VB.TextBox Text4 
@@ -536,6 +518,21 @@ Begin VB.Form Form3
       Top             =   4560
       Width           =   2295
    End
+   Begin VB.Image Image1 
+      Height          =   255
+      Left            =   13440
+      Top             =   9000
+      Width           =   1215
+   End
+   Begin VB.Label Label28 
+      Caption         =   "Label28"
+      Height          =   735
+      Left            =   17040
+      TabIndex        =   49
+      Top             =   0
+      Visible         =   0   'False
+      Width           =   1695
+   End
    Begin VB.Label Label27 
       BackStyle       =   0  'Transparent
       Caption         =   "Buscar Dato:"
@@ -550,7 +547,7 @@ Begin VB.Form Form3
       EndProperty
       Height          =   255
       Left            =   6360
-      TabIndex        =   47
+      TabIndex        =   46
       Top             =   2880
       Width           =   1335
    End
@@ -568,7 +565,7 @@ Begin VB.Form Form3
       EndProperty
       Height          =   375
       Left            =   600
-      TabIndex        =   42
+      TabIndex        =   41
       Top             =   3120
       Width           =   975
    End
@@ -586,7 +583,7 @@ Begin VB.Form Form3
       EndProperty
       Height          =   255
       Left            =   480
-      TabIndex        =   40
+      TabIndex        =   39
       Top             =   1920
       Width           =   2175
    End
@@ -604,7 +601,7 @@ Begin VB.Form Form3
       EndProperty
       Height          =   375
       Left            =   8760
-      TabIndex        =   38
+      TabIndex        =   37
       Top             =   1560
       Width           =   735
    End
@@ -621,7 +618,7 @@ Begin VB.Form Form3
       EndProperty
       Height          =   375
       Left            =   9720
-      TabIndex        =   37
+      TabIndex        =   36
       Top             =   1560
       Width           =   1275
    End
@@ -1017,15 +1014,14 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+
 Private Sub Command1_Click()
 Form5.Show
 Me.Hide
 End Sub
 
 Private Sub Command2_Click()
-Adodc3.Recordset.AddNew
-Adodc3.Recordset.Update
-Adodc3.Refresh
+Label28.Caption = Text3.Text * Text1.Text
 End Sub
 
 Private Sub Command3_Click()
@@ -1057,8 +1053,8 @@ End Sub
 Private Sub Command4_Click()
 If Lista.Row <= 0 Then
 MsgBox "Debe Seleccionar una fila"
-'ElseIf Lista.Row = 1 Then
-' Lista.Clear
+    ElseIf Lista.Row = 1 Then
+    Lista.Clear
 Else
 Lista.RemoveItem (Lista.Row)
 End If
@@ -1104,12 +1100,24 @@ Text12.Text = ""
 End Sub
 
 Private Sub Command6_Click()
+With DataReport1
+        .Sections("Sección2").Controls("Etiqueta1").Caption = Label18.Caption
+        .Sections("Sección2").Controls("Etiqueta2").Caption = Label11.Caption
+        .Sections("Sección2").Controls("Etiqueta3").Caption = Label13.Caption
+        .Sections("Sección2").Controls("Etiqueta4").Caption = Label15.Caption
+        .Sections("Sección2").Controls("Etiqueta5").Caption = Label20.Caption
+    End With
+
+Temporal
+Set DataReport1.DataSource = Rstemporal
 DataReport1.Show
 End Sub
 
 Private Sub Form_Load()
 Combo2.AddItem ("Cédula")
 Combo1.AddItem ("id")
+Text1.Text = ""
+Text5.Text = ""
 Lista.ColWidth(0) = 10
 Lista.ColWidth(1) = 3000
 Lista.ColAlignment(1) = 5
@@ -1132,13 +1140,18 @@ Lista.Col = 4
 Lista.Row = 0
 Lista.Text = "Total Unico"
 fila = 1
+Temporal
+    With Rstemporal
+        For i = 1 To .RecordCount
+            .Delete
+            .MoveNext
+        Next i
+    End With
 End Sub
-
-
-
 
 Private Sub Text1_KeyPress(KeyAscii As Integer)
 If KeyAscii = 13 Then
+    Label28.Caption = Text3.Text * Text1.Text
     Lista.Col = 1
     Lista.Row = fila
     Lista.Text = Text2.Text
@@ -1148,13 +1161,32 @@ If KeyAscii = 13 Then
     Lista.Col = 3
     Lista.Row = fila
     Lista.Text = Text1.Text
-    a = Val(Text3.Text) * Val(Text1.Text)
     Lista.Col = 4
     Lista.Row = fila
-    Lista.Text = a
-    tot = tot + a
+    Lista.Text = Label28.Caption
+    tot = tot + Label28.Caption
     Text5.Text = tot
     fila = fila + 1
+    DetalleFactura
+    With Rsdefac
+        .AddNew
+        !Cantidad = Text1.Text
+        !Descripción = Text2.Text
+        !PrecioUnitario = Text5.Text
+        !Total = Text7.Text
+        !Código_producto = Text13.Text
+        .UpdateBatch
+    End With
+    Temporal
+    With Rstemporal
+        .AddNew
+        !Cantidad = Text1.Text
+        !Descripción = Text2.Text
+        !PrecioUnitario = Text5.Text
+        !Total = Text7.Text
+        !Código_producto = Text13.Text
+        .UpdateBatch
+    End With
     Text2.Text = ""
     Text3.Text = ""
     Text1.Text = ""
