@@ -50,7 +50,7 @@ Begin VB.Form Form4
    Begin MSDataGridLib.DataGrid DataGrid1 
       Bindings        =   "Form4.frx":CEC3
       Height          =   2535
-      Left            =   3120
+      Left            =   3240
       TabIndex        =   1
       Top             =   4200
       Width           =   9375

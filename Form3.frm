@@ -70,7 +70,7 @@ Begin VB.Form Form3
       Orientation     =   0
       Enabled         =   -1
       Connect         =   $"Form3.frx":DC12
-      OLEDBString     =   $"Form3.frx":DC9E
+      OLEDBString     =   $"Form3.frx":DC9B
       OLEDBFile       =   ""
       DataSourceName  =   ""
       OtherAttributes =   ""
@@ -148,9 +148,9 @@ Begin VB.Form Form3
    End
    Begin VB.ComboBox Combo1 
       Height          =   420
-      ItemData        =   "Form3.frx":DD2A
+      ItemData        =   "Form3.frx":DD24
       Left            =   2760
-      List            =   "Form3.frx":DD2C
+      List            =   "Form3.frx":DD26
       TabIndex        =   43
       Top             =   1800
       Width           =   1935
@@ -238,8 +238,8 @@ Begin VB.Form Form3
       ForeColor       =   -2147483640
       Orientation     =   0
       Enabled         =   -1
-      Connect         =   $"Form3.frx":DD2E
-      OLEDBString     =   $"Form3.frx":DDB7
+      Connect         =   $"Form3.frx":DD28
+      OLEDBString     =   $"Form3.frx":DDB1
       OLEDBFile       =   ""
       DataSourceName  =   ""
       OtherAttributes =   ""
@@ -285,8 +285,8 @@ Begin VB.Form Form3
       ForeColor       =   -2147483640
       Orientation     =   0
       Enabled         =   -1
-      Connect         =   $"Form3.frx":DE40
-      OLEDBString     =   $"Form3.frx":DEC9
+      Connect         =   $"Form3.frx":DE3A
+      OLEDBString     =   $"Form3.frx":DEC3
       OLEDBFile       =   ""
       DataSourceName  =   ""
       OtherAttributes =   ""
@@ -317,10 +317,10 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   615
-      Left            =   1320
+      Left            =   14280
       MaskColor       =   &H00FFFFFF&
       TabIndex        =   34
-      Top             =   6240
+      Top             =   360
       Width           =   2055
    End
    Begin VB.TextBox Text12 
@@ -453,7 +453,7 @@ Begin VB.Form Form3
       Width           =   2175
    End
    Begin VB.CommandButton Command4 
-      Caption         =   "Borrar ultima fila"
+      Caption         =   "Borrar"
       BeginProperty Font 
          Name            =   "Baskerville Old Face"
          Size            =   14.25
@@ -1051,6 +1051,16 @@ Else
         MsgBox "No se ha podido encontrar el archivo deseado", vbCritical, "Archivo no encontrado"
         RsProductos.MoveFirst
     End If
+End If
+End Sub
+
+Private Sub Command4_Click()
+If Lista.Row <= 0 Then
+MsgBox "Debe Seleccionar una fila"
+'ElseIf Lista.Row = 1 Then
+' Lista.Clear
+Else
+Lista.RemoveItem (Lista.Row)
 End If
 End Sub
 
