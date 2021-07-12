@@ -1,33 +1,33 @@
 VERSION 5.00
-Begin {C0E45035-5775-11D0-B388-00A0C9055D8E} DataEnvironment1 
+Begin {C0E45035-5775-11D0-B388-00A0C9055D8E} DataEnvironment2 
    ClientHeight    =   7245
    ClientLeft      =   0
    ClientTop       =   0
-   ClientWidth     =   13740
-   _ExtentX        =   24236
+   ClientWidth     =   13680
+   _ExtentX        =   24130
    _ExtentY        =   12779
    FolderFlags     =   1
-   TypeLibGuid     =   "{72B20A2A-6E75-46BD-9A0E-2F966925C3C0}"
-   TypeInfoGuid    =   "{5F5C7354-B4D4-4186-A65D-DBD80159622B}"
+   TypeLibGuid     =   "{1462C55A-B709-4E3D-A4A3-76C466614120}"
+   TypeInfoGuid    =   "{0A8BFF6E-95F9-4A74-ABD3-01BF4352533F}"
    TypeInfoCookie  =   0
    Version         =   4
    NumConnections  =   1
    BeginProperty Connection1 
-      ConnectionName  =   "micomand"
+      ConnectionName  =   "Connection1"
       ConnDispId      =   1001
       SourceOfData    =   3
-      ConnectionSource=   $"DataEnvironment1.dsx":0000
+      ConnectionSource=   $"DataEnvironment2.dsx":0000
       Expanded        =   -1  'True
       QuoteChar       =   96
       SeparatorChar   =   46
    EndProperty
    NumRecordsets   =   1
    BeginProperty Recordset1 
-      CommandName     =   "comand2"
+      CommandName     =   "Command1"
       CommDispId      =   1002
-      RsDispId        =   1006
+      RsDispId        =   1005
       CommandText     =   "Factura"
-      ActiveConnectionName=   "micomand"
+      ActiveConnectionName=   "Connection1"
       CommandType     =   2
       dbObjectType    =   1
       IsRSReturning   =   -1  'True
@@ -94,7 +94,7 @@ Begin {C0E45035-5775-11D0-B388-00A0C9055D8E} DataEnvironment1
       AggregateCount  =   0
    EndProperty
 End
-Attribute VB_Name = "DataEnvironment1"
+Attribute VB_Name = "DataEnvironment2"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = True

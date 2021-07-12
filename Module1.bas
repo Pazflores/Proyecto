@@ -8,6 +8,8 @@ Global Rstemporal As New ADODB.Recordset
 'Global RsDetalleFactura As New ADODB.Recordset
 'Global RsFactura As New ADODB.Recordset
 Global RsProductos As New ADODB.Recordset
+Global Rsfactura As New ADODB.Recordset
+
 'Global RsTipodeProducto As New ADODB.Recordset
 
 Sub main()
@@ -17,7 +19,7 @@ Sub main()
         .Open "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Usuario\Desktop\Proyectopap\Proyecto\Base_de_Datos.mdb;Persist Security Info=False"
         '.Open " Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\PAZ\Desktop\repositorio\Proyecto\Base_de_Datos.mdb;Persist Security Info=False "
         '.Open " Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Karen\Desktop\Papeleria\Proyecto\Base_de_Datos.mdb;Persist Security Info=False"
-        Form1.Show
+        Form7.Show
     End With
 End Sub
 
@@ -59,6 +61,16 @@ Sub Temporal()
             .CursorType = adOpenKeyset
             .LockType = adLockOptimistic
             .Open "select * from Temporal", Base
+    End With
+End Sub
+
+Sub Factura()
+    With Rsfactura
+        If .State = 1 Then .Close
+            .Source = "Factura"
+            .CursorType = adOpenKeyset
+            .LockType = adLockOptimistic
+            .Open "select * from Factura", Base
     End With
 End Sub
     

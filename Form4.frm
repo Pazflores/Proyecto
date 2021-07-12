@@ -1,5 +1,4 @@
 VERSION 5.00
-Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Object = "{CDE57A40-8B86-11D0-B3C6-00A0C90AEA82}#1.0#0"; "MSDATGRD.OCX"
 Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
 Begin VB.Form Form4 
@@ -8,11 +7,11 @@ Begin VB.Form Form4
    ClientHeight    =   8430
    ClientLeft      =   4995
    ClientTop       =   2670
-   ClientWidth     =   15735
+   ClientWidth     =   15030
    LinkTopic       =   "Form4"
    Picture         =   "Form4.frx":0000
    ScaleHeight     =   8430
-   ScaleWidth      =   15735
+   ScaleWidth      =   15030
    StartUpPosition =   2  'CenterScreen
    Begin VB.TextBox txtBuscar 
       Height          =   405
@@ -113,51 +112,16 @@ Begin VB.Form Form4
          EndProperty
       EndProperty
    End
-   Begin MSAdodcLib.Adodc Adodc1 
+   Begin VB.PictureBox Adodc1 
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
       Height          =   375
       Left            =   12840
+      ScaleHeight     =   315
+      ScaleWidth      =   1755
+      TabIndex        =   6
       Top             =   360
       Width           =   1815
-      _ExtentX        =   3201
-      _ExtentY        =   661
-      ConnectMode     =   0
-      CursorLocation  =   3
-      IsolationLevel  =   -1
-      ConnectionTimeout=   15
-      CommandTimeout  =   30
-      CursorType      =   3
-      LockType        =   3
-      CommandType     =   2
-      CursorOptions   =   0
-      CacheSize       =   50
-      MaxRecords      =   0
-      BOFAction       =   0
-      EOFAction       =   0
-      ConnectStringType=   1
-      Appearance      =   1
-      BackColor       =   -2147483643
-      ForeColor       =   -2147483640
-      Orientation     =   0
-      Enabled         =   -1
-      Connect         =   $"Form4.frx":CED8
-      OLEDBString     =   $"Form4.frx":CF61
-      OLEDBFile       =   ""
-      DataSourceName  =   ""
-      OtherAttributes =   ""
-      UserName        =   ""
-      Password        =   ""
-      RecordSource    =   "Productos"
-      Caption         =   "Adodc1"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      _Version        =   393216
    End
    Begin MSComDlg.CommonDialog CommonDialog1 
       Left            =   11400
@@ -208,11 +172,13 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-Dim Buscar As String
+Dim buscar As String
+
+
 
 Private Sub Form_Load()
     Adodc1.Visible = False
-    FormatoDataGrid
+    formatodatagrid
     
     'main
     Productos
@@ -232,7 +198,7 @@ Private Sub R_Click()
     Me.Hide
 End Sub
 
-Sub FormatoDataGrid()
+Sub formatodatagrid()
     DataGrid1.Columns(0).Width = 1000
     DataGrid1.Columns(1).Width = 2000
     DataGrid1.Columns(2).Width = 1500
@@ -247,7 +213,7 @@ Private Sub RM_Click()
 End Sub
 
 Private Sub txtBuscar_Change()
-    Buscar = txtBuscar.Text & "%"
+    buscar = txtBuscar.Text & "%"
     If Combo1.Text = "Código" Then BuscarCodigo
     If Combo1.Text = "Nombre" Then BuscarNombre
     If Combo1.Text = "Color" Then BuscarColor
@@ -260,7 +226,7 @@ Sub BuscarCodigo()
     RsProductos.CursorType = adOpenKeyset 'Definimos el tipo de cursor.
     RsProductos.LockType = adLockOptimistic 'Definimos el tipo de bloqueo.
             
-    RsProductos.Open "Select * from Productos Where Código like '%" & Buscar & "'", Base
+    RsProductos.Open "Select * from Productos Where Código like '%" & buscar & "'", Base
 End Sub
 
 Sub BuscarNombre()
@@ -268,7 +234,7 @@ Sub BuscarNombre()
     RsProductos.CursorType = adOpenKeyset 'Definimos el tipo de cursor.
     RsProductos.LockType = adLockOptimistic 'Definimos el tipo de bloqueo.
             
-    RsProductos.Open "Select * from Productos Where Nombre like '%" & Buscar & "'", Base
+    RsProductos.Open "Select * from Productos Where Nombre like '%" & buscar & "'", Base
 End Sub
 
 Sub BuscarColor()
@@ -276,7 +242,7 @@ Sub BuscarColor()
     RsProductos.CursorType = adOpenKeyset 'Definimos el tipo de cursor.
     RsProductos.LockType = adLockOptimistic 'Definimos el tipo de bloqueo.
             
-    RsProductos.Open "Select * from Productos Where Color like '%" & Buscar & "'", Base
+    RsProductos.Open "Select * from Productos Where Color like '%" & buscar & "'", Base
 End Sub
 
 Sub BuscarId_Producto()
@@ -284,5 +250,5 @@ Sub BuscarId_Producto()
     RsProductos.CursorType = adOpenKeyset 'Definimos el tipo de cursor.
     RsProductos.LockType = adLockOptimistic 'Definimos el tipo de bloqueo.
             
-    RsProductos.Open "Select * from Productos Where Id_producto like '%" & Buscar & "'", Base
+    RsProductos.Open "Select * from Productos Where Id_producto like '%" & buscar & "'", Base
 End Sub

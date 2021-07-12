@@ -1,5 +1,4 @@
 VERSION 5.00
-Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFLXGRD.OCX"
 Begin VB.Form Form3 
    BackColor       =   &H8000000E&
@@ -43,52 +42,17 @@ Begin VB.Form Form3
       Top             =   7320
       Width           =   3015
    End
-   Begin MSAdodcLib.Adodc Adodc3 
+   Begin VB.PictureBox Adodc3 
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
       Height          =   330
       Left            =   17520
+      ScaleHeight     =   270
+      ScaleWidth      =   1140
+      TabIndex        =   50
       Top             =   6360
       Visible         =   0   'False
       Width           =   1200
-      _ExtentX        =   2117
-      _ExtentY        =   582
-      ConnectMode     =   0
-      CursorLocation  =   3
-      IsolationLevel  =   -1
-      ConnectionTimeout=   15
-      CommandTimeout  =   30
-      CursorType      =   3
-      LockType        =   3
-      CommandType     =   2
-      CursorOptions   =   0
-      CacheSize       =   50
-      MaxRecords      =   0
-      BOFAction       =   0
-      EOFAction       =   0
-      ConnectStringType=   1
-      Appearance      =   1
-      BackColor       =   -2147483643
-      ForeColor       =   -2147483640
-      Orientation     =   0
-      Enabled         =   -1
-      Connect         =   $"Form3.frx":DC12
-      OLEDBString     =   $"Form3.frx":DC9E
-      OLEDBFile       =   ""
-      DataSourceName  =   ""
-      OtherAttributes =   ""
-      UserName        =   ""
-      Password        =   ""
-      RecordSource    =   "DetalleFactura"
-      Caption         =   "Adodc3"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "Myanmar Text"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      _Version        =   393216
    End
    Begin VB.ComboBox Combo2 
       Height          =   420
@@ -149,9 +113,9 @@ Begin VB.Form Form3
    End
    Begin VB.ComboBox Combo1 
       Height          =   420
-      ItemData        =   "Form3.frx":DD2A
+      ItemData        =   "Form3.frx":DC12
       Left            =   2760
-      List            =   "Form3.frx":DD2C
+      List            =   "Form3.frx":DC14
       TabIndex        =   42
       Top             =   1800
       Width           =   1935
@@ -194,99 +158,29 @@ Begin VB.Form Form3
       Left            =   18000
       Top             =   7080
    End
-   Begin MSAdodcLib.Adodc Adodc2 
+   Begin VB.PictureBox Adodc2 
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
       Height          =   375
       Left            =   17520
+      ScaleHeight     =   315
+      ScaleWidth      =   1140
+      TabIndex        =   51
       Top             =   5520
       Visible         =   0   'False
       Width           =   1200
-      _ExtentX        =   2117
-      _ExtentY        =   661
-      ConnectMode     =   0
-      CursorLocation  =   3
-      IsolationLevel  =   -1
-      ConnectionTimeout=   15
-      CommandTimeout  =   30
-      CursorType      =   3
-      LockType        =   3
-      CommandType     =   2
-      CursorOptions   =   0
-      CacheSize       =   50
-      MaxRecords      =   0
-      BOFAction       =   0
-      EOFAction       =   0
-      ConnectStringType=   1
-      Appearance      =   1
-      BackColor       =   -2147483643
-      ForeColor       =   -2147483640
-      Orientation     =   0
-      Enabled         =   -1
-      Connect         =   $"Form3.frx":DD2E
-      OLEDBString     =   $"Form3.frx":DDBA
-      OLEDBFile       =   ""
-      DataSourceName  =   ""
-      OtherAttributes =   ""
-      UserName        =   ""
-      Password        =   ""
-      RecordSource    =   "Productos"
-      Caption         =   "Adodc2"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "Myanmar Text"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      _Version        =   393216
    End
-   Begin MSAdodcLib.Adodc Adodc1 
+   Begin VB.PictureBox Adodc1 
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
       Height          =   375
       Left            =   17520
+      ScaleHeight     =   315
+      ScaleWidth      =   1140
+      TabIndex        =   52
       Top             =   4680
       Visible         =   0   'False
       Width           =   1200
-      _ExtentX        =   2117
-      _ExtentY        =   661
-      ConnectMode     =   0
-      CursorLocation  =   3
-      IsolationLevel  =   -1
-      ConnectionTimeout=   15
-      CommandTimeout  =   30
-      CursorType      =   3
-      LockType        =   3
-      CommandType     =   2
-      CursorOptions   =   0
-      CacheSize       =   50
-      MaxRecords      =   0
-      BOFAction       =   0
-      EOFAction       =   0
-      ConnectStringType=   1
-      Appearance      =   1
-      BackColor       =   -2147483643
-      ForeColor       =   -2147483640
-      Orientation     =   0
-      Enabled         =   -1
-      Connect         =   $"Form3.frx":DE46
-      OLEDBString     =   $"Form3.frx":DED2
-      OLEDBFile       =   ""
-      DataSourceName  =   ""
-      OtherAttributes =   ""
-      UserName        =   ""
-      Password        =   ""
-      RecordSource    =   "Cliente"
-      Caption         =   "Adodc1"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "Myanmar Text"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      _Version        =   393216
    End
    Begin VB.CommandButton Command1 
       Caption         =   "Regresar al Menú"
@@ -384,6 +278,7 @@ Begin VB.Form Form3
    End
    Begin VB.TextBox Text7 
       DataSource      =   "Adodc3"
+      Enabled         =   0   'False
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -401,6 +296,7 @@ Begin VB.Form Form3
    End
    Begin VB.TextBox Text6 
       DataSource      =   "Adodc3"
+      Enabled         =   0   'False
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -419,6 +315,7 @@ Begin VB.Form Form3
    Begin VB.TextBox Text5 
       DataField       =   "PrecioUnitario"
       DataSource      =   "Adodc3"
+      Enabled         =   0   'False
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -501,7 +398,6 @@ Begin VB.Form Form3
       Width           =   2295
    End
    Begin VB.TextBox Text1 
-      DataField       =   "Cantidad"
       DataSource      =   "Adodc3"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
@@ -527,9 +423,9 @@ Begin VB.Form Form3
    Begin VB.Label Label28 
       Caption         =   "Label28"
       Height          =   735
-      Left            =   17040
+      Left            =   17160
       TabIndex        =   49
-      Top             =   0
+      Top             =   1080
       Visible         =   0   'False
       Width           =   1695
    End
@@ -1051,12 +947,15 @@ End If
 End Sub
 
 Private Sub Command4_Click()
-If Lista.Row <= 0 Then
+If lista.Row <= 0 Then
 MsgBox "Debe Seleccionar una fila"
-    ElseIf Lista.Row = 1 Then
-    Lista.Clear
+    ElseIf lista.Row = 1 Then
+    lista.Clear
 Else
-Lista.RemoveItem (Lista.Row)
+lista.RemoveItem (lista.Row)
+Text7.Text = ""
+Text6.Text = ""
+Text5.Text = ""
 End If
 End Sub
 
@@ -1106,6 +1005,11 @@ With DataReport1
         .Sections("Sección2").Controls("Etiqueta3").Caption = Label13.Caption
         .Sections("Sección2").Controls("Etiqueta4").Caption = Label15.Caption
         .Sections("Sección2").Controls("Etiqueta5").Caption = Label20.Caption
+        .Sections("Sección4").Controls("Etiqueta18").Caption = Label17.Caption
+        .Sections("Sección4").Controls("Etiqueta17").Caption = Label22.Caption
+        .Sections("Sección3").Controls("Etiqueta19").Caption = Text7.Text
+        .Sections("Sección3").Controls("Etiqueta22").Caption = Text6.Text
+        .Sections("Sección3").Controls("Etiqueta23").Caption = Text5.Text
     End With
 
 Temporal
@@ -1118,27 +1022,27 @@ Combo2.AddItem ("Cédula")
 Combo1.AddItem ("id")
 Text1.Text = ""
 Text5.Text = ""
-Lista.ColWidth(0) = 10
-Lista.ColWidth(1) = 3000
-Lista.ColAlignment(1) = 5
-Lista.Col = 1
-Lista.Row = 0
-Lista.Text = "Producto"
-Lista.ColWidth(2) = 3000
-Lista.ColAlignment(2) = 5
-Lista.Col = 2
-Lista.Row = 0
-Lista.Text = "Precio"
-Lista.ColWidth(3) = 3000
-Lista.ColAlignment(3) = 5
-Lista.Col = 3
-Lista.Row = 0
-Lista.Text = "Cantidad"
-Lista.ColWidth(4) = 3000
-Lista.ColAlignment(4) = 5
-Lista.Col = 4
-Lista.Row = 0
-Lista.Text = "Total Unico"
+lista.ColWidth(0) = 10
+lista.ColWidth(1) = 3000
+lista.ColAlignment(1) = 5
+lista.Col = 1
+lista.Row = 0
+lista.Text = "Producto"
+lista.ColWidth(2) = 3000
+lista.ColAlignment(2) = 5
+lista.Col = 2
+lista.Row = 0
+lista.Text = "Precio"
+lista.ColWidth(3) = 3000
+lista.ColAlignment(3) = 5
+lista.Col = 3
+lista.Row = 0
+lista.Text = "Cantidad"
+lista.ColWidth(4) = 3000
+lista.ColAlignment(4) = 5
+lista.Col = 4
+lista.Row = 0
+lista.Text = "Total Unico"
 fila = 1
 Temporal
     With Rstemporal
@@ -1149,21 +1053,22 @@ Temporal
     End With
 End Sub
 
+
 Private Sub Text1_KeyPress(KeyAscii As Integer)
 If KeyAscii = 13 Then
     Label28.Caption = Text3.Text * Text1.Text
-    Lista.Col = 1
-    Lista.Row = fila
-    Lista.Text = Text2.Text
-    Lista.Col = 2
-    Lista.Row = fila
-    Lista.Text = Text3.Text
-    Lista.Col = 3
-    Lista.Row = fila
-    Lista.Text = Text1.Text
-    Lista.Col = 4
-    Lista.Row = fila
-    Lista.Text = Label28.Caption
+    lista.Col = 1
+    lista.Row = fila
+    lista.Text = Text2.Text
+    lista.Col = 2
+    lista.Row = fila
+    lista.Text = Text3.Text
+    lista.Col = 3
+    lista.Row = fila
+    lista.Text = Text1.Text
+    lista.Col = 4
+    lista.Row = fila
+    lista.Text = Label28.Caption
     tot = tot + Label28.Caption
     Text5.Text = tot
     fila = fila + 1
@@ -1193,7 +1098,7 @@ If KeyAscii = 13 Then
     Text13.Text = ""
     Text2.SetFocus
     Text6 = tot * 0.12
-    Text7.Text = tot + Val(Text6.Text)
+    Text7.Text = tot + Text6.Text
 End If
 End Sub
 
